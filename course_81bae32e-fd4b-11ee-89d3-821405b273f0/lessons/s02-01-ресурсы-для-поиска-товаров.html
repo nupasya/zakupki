@@ -1,0 +1,638 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ресурсы для поиска товаров</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f5f5;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+            border-bottom: 3px solid #696BEE;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #2a2a2a;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #3a3a3a;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .highlighted {
+            background: #f0f4ff;
+            padding: 16px 20px;
+            border-left: 4px solid #696BEE;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .numbered-item {
+            padding: 12px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .numbered-item:last-child {
+            border-bottom: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: zoom-in;
+        }
+
+        .toc {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .toc li:last-child {
+            border-bottom: none;
+        }
+
+        strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 2px;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #696BEE;
+            border-radius: 2px;
+            width: 100%;
+        }
+
+        .image-lightbox {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+            background: rgba(17, 24, 39, 0.88);
+            z-index: 9999;
+        }
+
+        .image-lightbox.is-open {
+            display: flex;
+        }
+
+        .image-lightbox img {
+            max-width: min(95vw, 1400px);
+            max-height: 88vh;
+            margin: 0;
+            border-radius: 10px;
+            box-shadow: 0 16px 60px rgba(0,0,0,0.45);
+            cursor: default;
+            transform: scale(1);
+            transform-origin: center center;
+            transition: transform 0.08s ease-out;
+        }
+
+        .image-lightbox-close {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 44px;
+            height: 44px;
+            border: none;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.18);
+            color: #fff;
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .image-lightbox-close:hover {
+            background: rgba(255,255,255,0.28);
+        }
+    
+        body {
+            max-width: none;
+            margin: 0;
+            padding: 0;
+            background: #eef2ff;
+        }
+
+        .course-sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 260px;
+            z-index: 100;
+            overflow-y: auto;
+        }
+
+        .course-sidebar-inner {
+            background: #111827;
+            color: #fff;
+            min-height: 100%;
+            padding: 22px 16px 32px;
+            box-shadow: 4px 0 24px rgba(17, 24, 39, 0.18);
+        }
+
+        .lesson-layout {
+            margin-left: 260px;
+            padding: 32px 36px 60px;
+        }
+
+        .lesson-main {
+            max-width: 1060px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1060px;
+            margin: 0 auto;
+            border-radius: 20px;
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+        }
+
+        .course-sidebar-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.62);
+        }
+
+        .course-sidebar-title {
+            margin: 10px 0 18px;
+            font-size: 20px;
+            line-height: 1.25;
+            color: #fff;
+        }
+
+        .course-sidebar-back-link {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 18px;
+            padding: 10px 12px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.10);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .course-sidebar-back-link:hover {
+            background: rgba(255,255,255,0.16);
+        }
+
+        .course-progress-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 18px;
+            padding: 14px;
+            margin-bottom: 18px;
+        }
+
+        .course-progress-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: baseline;
+            font-size: 13px;
+        }
+
+        .course-progress-top strong {
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .course-progress-bar {
+            height: 8px;
+            background: rgba(255,255,255,0.12);
+            border-radius: 999px;
+            overflow: hidden;
+            margin: 12px 0 8px;
+        }
+
+        .course-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #818cf8, #c4b5fd);
+            border-radius: 999px;
+        }
+
+        .course-progress-meta {
+            color: rgba(255,255,255,0.7);
+            font-size: 12px;
+        }
+
+        .course-sidebar-section + .course-sidebar-section {
+            margin-top: 16px;
+        }
+
+        .course-sidebar-section-title {
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .course-sidebar-lessons {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .course-sidebar-lesson {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 14px;
+            text-decoration: none;
+            color: rgba(255,255,255,0.88);
+            background: rgba(255,255,255,0.04);
+            border: 1px solid transparent;
+            font-size: 14px;
+            line-height: 1.35;
+        }
+
+        .course-sidebar-lesson:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.08);
+        }
+
+        .course-sidebar-lesson.is-current {
+            background: rgba(129,140,248,0.24);
+            border-color: rgba(196,181,253,0.55);
+            color: #fff;
+        }
+
+        .course-sidebar-lesson.is-completed .course-sidebar-status {
+            background: #22c55e;
+            color: #052e16;
+        }
+
+        .course-sidebar-lesson.is-locked {
+            color: rgba(255,255,255,0.45);
+            background: rgba(255,255,255,0.03);
+        }
+
+        .course-sidebar-status {
+            flex: 0 0 auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.14);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .course-sidebar-status.locked {
+            background: rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.45);
+        }
+
+        .progress-fill {
+            width: 13%;
+        }
+
+        @media (max-width: 900px) {
+            .course-sidebar {
+                position: static;
+                width: 100%;
+                bottom: auto;
+            }
+
+            .course-sidebar-inner {
+                min-height: auto;
+                padding: 20px 16px;
+            }
+
+            .lesson-layout {
+                margin-left: 0;
+                padding: 20px;
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="lesson-layout">
+<aside class="course-sidebar">
+    <div class="course-sidebar-inner">
+        <div class="course-sidebar-label">Программа курса</div>
+        <h2 class="course-sidebar-title">Часть 1. Как, где и что считать?</h2>
+        <a class="course-sidebar-back-link" href="../index.html">Назад к курсу</a>
+        <div class="course-progress-card">
+            <div class="course-progress-top"><span>Прогресс preview</span><strong>4 из 30</strong></div>
+            <div class="course-progress-bar"><div class="course-progress-fill" style="width: 13%"></div></div>
+            <div class="course-progress-meta">13% пути по собранным урокам</div>
+        </div>
+        <div class="course-sidebar-sections">
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Общая информация</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson is-completed" href="s01-01-закупки-твой-план-адаптации.html"><span class="course-sidebar-status">1</span><span>Закупки. Твой план адаптации</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s01-02-о-ч-м-этот-курс.html"><span class="course-sidebar-status">2</span><span>О чём этот курс?</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s01-03-глоссарий.html"><span class="course-sidebar-status">3</span><span>Глоссарий</span></a>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Основные инструменты работы</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson is-current" href="s02-01-ресурсы-для-поиска-товаров.html"><span class="course-sidebar-status">4</span><span>Ресурсы для поиска товаров</span></a>
+                    <a class="course-sidebar-lesson" href="s02-02-методы-поиска-товаров.html"><span class="course-sidebar-status">5</span><span>Методы поиска товаров</span></a>
+                    <a class="course-sidebar-lesson" href="s02-03-методы-определения-качества-фабрики-хорошие-фабрики.html"><span class="course-sidebar-status">6</span><span>Методы определения качества фабрики. Хорошие фабрики</span></a>
+                    <a class="course-sidebar-lesson" href="s02-04-методы-определения-качества-фабрики-плохие-фабрики.html"><span class="course-sidebar-status">7</span><span>Методы определения качества фабрики. Плохие фабрики</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Тест по определению качества фабрики <em>(Онлайн-тест)</em></span></div>
+                    <a class="course-sidebar-lesson" href="s02-06-лайфхаки-по-общению-с-фабриками.html"><span class="course-sidebar-status">8</span><span>Лайфхаки по общению с фабриками</span></a>
+                    <a class="course-sidebar-lesson" href="s02-07-шпаргалка-для-новичков-диалог-с-фабрикой.html"><span class="course-sidebar-status">9</span><span>Шпаргалка для новичков - диалог с фабрикой</span></a>
+                    <a class="course-sidebar-lesson" href="s02-08-наш-офис-в-китае-кто-такой-тони.html"><span class="course-sidebar-status">10</span><span>Наш офис в Китае. Кто такой Тони</span></a>
+                    <a class="course-sidebar-lesson" href="s02-09-правила-поведения-в-wechat.html"><span class="course-sidebar-status">11</span><span>Правила поведения в WeChat</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Рефлексия <em>(Задание)</em></span></div>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Хороший расчет</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson" href="s03-01-работа-с-просчетом-в-planfix.html"><span class="course-sidebar-status">12</span><span>Работа с просчетом в Planfix</span></a>
+                    <a class="course-sidebar-lesson" href="s03-02-как-самостоятельно-поставить-задачу-на-просчет.html"><span class="course-sidebar-status">13</span><span>Как самостоятельно поставить задачу на просчет</span></a>
+                    <a class="course-sidebar-lesson" href="s03-03-навигатор-по-шапке-planfix.html"><span class="course-sidebar-status">14</span><span>Навигатор по шапке Planfix</span></a>
+                    <a class="course-sidebar-lesson" href="s03-04-mockups-генератор-и-галерея-мокапов-3-0.html"><span class="course-sidebar-status">15</span><span>Mockups. Генератор и галерея мокапов 3.0</span></a>
+                    <a class="course-sidebar-lesson" href="s03-05-проработка-запроса-удели-внимание-клиенту.html"><span class="course-sidebar-status">16</span><span>Проработка запроса: удели внимание клиенту!</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Оформление презентации <em>(Лонгрид)</em></span></div>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Копилка презентаций <em>(Лонгрид)</em></span></div>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Рефлексия <em>(Задание)</em></span></div>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Инструкция по работе с калькулятором Headcorn</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson" href="s04-01-1-навигация-и-логика-системы-headcorn.html"><span class="course-sidebar-status">17</span><span>1. Навигация и логика системы Headcorn</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>2. Проект и позиция: старт расчёта <em>(Лонгрид)</em></span></div>
+                    <a class="course-sidebar-lesson" href="s04-03-3-работа-с-фабриками-и-ai-парсер.html"><span class="course-sidebar-status">18</span><span>3. Работа с фабриками и AI-парсер</span></a>
+                    <a class="course-sidebar-lesson" href="s04-04-4-логистика-вэд-и-себестоимость.html"><span class="course-sidebar-status">19</span><span>4. Логистика, ВЭД и себестоимость</span></a>
+                    <a class="course-sidebar-lesson" href="s04-05-5-клиентская-часть-цены-и-кп.html"><span class="course-sidebar-status">20</span><span>5. Клиентская часть: цены и КП</span></a>
+                    <a class="course-sidebar-lesson" href="s04-06-6-дополнительные-функции-проекта-и-международные-просч-ты.html"><span class="course-sidebar-status">21</span><span>6. Дополнительные функции проекта и международные просчёты</span></a>
+                    <a class="course-sidebar-lesson" href="s04-07-7-типовые-сценарии-работы-словарь-терминов-калькулятора-headcorn.html"><span class="course-sidebar-status">22</span><span>7. Типовые сценарии работы. Словарь терминов калькулятора Headcorn</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Рефлексия <em>(Задание)</em></span></div>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Способы доставки</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson" href="s05-01-виды-маршрутов-постоянные-категории-товаров.html"><span class="course-sidebar-status">23</span><span>Виды маршрутов. Постоянные категории товаров</span></a>
+                    <a class="course-sidebar-lesson" href="s05-02-виды-маршрутов-новая-категория-товара.html"><span class="course-sidebar-status">24</span><span>Виды маршрутов. Новая категория товара</span></a>
+                    <a class="course-sidebar-lesson" href="s05-03-виды-маршрутов-международная-доставка.html"><span class="course-sidebar-status">25</span><span>Виды маршрутов. Международная доставка</span></a>
+                    <a class="course-sidebar-lesson" href="s05-04-чек-лист.html"><span class="course-sidebar-status">26</span><span>Чек-лист</span></a>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Сертификаты</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson" href="s06-01-сертификация.html"><span class="course-sidebar-status">27</span><span>Сертификация</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Понимание сертификации <em>(Онлайн-тест)</em></span></div>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Ценообразование</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson" href="s07-01-ценообразование-прайсинг-работа-с-ценой.html"><span class="course-sidebar-status">28</span><span>Ценообразование, прайсинг, работа с ценой</span></a>
+                    <a class="course-sidebar-lesson" href="s07-02-когда-повышать-когда-снижать-цену.html"><span class="course-sidebar-status">29</span><span>Когда повышать, когда снижать цену</span></a>
+                    <a class="course-sidebar-lesson" href="s07-03-сложные-категории-товаров.html"><span class="course-sidebar-status">30</span><span>Сложные категории товаров</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Рефлексия <em>(Задание)</em></span></div>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">KPI</div>
+                <div class="course-sidebar-lessons">
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Система KPI менеджеров по Китаю <em>(Лонгрид)</em></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+        <main class="lesson-main">
+    <div class="container">
+        <h1>Ресурсы для поиска товаров</h1>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <p><strong>Что ты должен уметь делать после модуля?</strong></p>
+
+        <div class="highlighted">
+            <p>Знать основные ресурсы для поиска фабрик и товаров (1688, Alibaba, Taobao, TMall, Aliexpress, Baidu, 义乌购, 广交会).</p>
+        </div>
+
+        <div class="highlighted">
+            <p>Уметь выбирать подходящий ресурс в зависимости от цели (образец, фото, массовый заказ).</p>
+        </div>
+
+        <div class="highlighted">
+            <p>Понимать, где искать вдохновение и как находить контакты фабрик.</p>
+        </div>
+
+        <p><strong>Что для этого нужно понять и запомнить?</strong></p>
+
+        <div class="highlighted">
+            <p>1688 — основной канал, Taobao/Aliexpress — для образцов и фото, Baidu/广交会 — для расширенного поиска.</p>
+        </div>
+
+        <div class="highlighted">
+            <p>Отличие розничных и оптовых площадок.</p>
+        </div>
+
+        <div class="highlighted">
+            <p>Вичат как канал связи с поставщиками.</p>
+        </div>
+
+        <p><strong>Как это лучше всего проверить?</strong></p>
+
+        <div class="highlighted">
+            <p>Практическое задание: попробуй зайти и поискать один и тот же товар на разных платформах, так ты увидишь основные различия этих ресурсов.</p>
+        </div>
+
+        <p>Где искать товары?</p>
+
+        <p>Основной ресурс:</p>
+
+        <div class="numbered-item">
+            <p>(связываемся напрямую) Это наш основной канал для поиска и общения, здесь легко можно найти китайскую фабрику любого направления.</p>
+        </div>
+
+        <div class="numbered-item">
+            <p>(связываемся и просим вичат)</p>
+        </div>
+
+        <p>Дополнительные ресурсы поиска:</p>
+
+        <p>Если поиск на основных ресурсах не дал результатов, можно найти нужный товар на сайтах ниже.</p>
+
+        <div class="numbered-item">
+            <p>(иногда на 1688 нет в наличии товара, чтобы заказать образец для клиента, тогда мы можем пойти на таобао, где продают в розницу и купить там требуемый образец)</p>
+        </div>
+
+        <div class="numbered-item">
+            <p>(внутри Таобао, в основном техника)</p>
+        </div>
+
+        <div class="numbered-item">
+            <p>(если нам нужно найти больше фото товара или аналоги для поиска на 1688)</p>
+        </div>
+
+        <div class="numbered-item">
+            <p>(может выдать картинки/ссылки на сайты)</p>
+        </div>
+
+        <div class="numbered-item">
+            <p>(можно подсмотреть Контакты и связаться через вичат)</p>
+        </div>
+
+        <div class="numbered-item">
+            <p>(можно зарегаться через вичат, без регистрации тоже можно там ползать, на многие товары доступ открыт, есть инфа о фабрике - дальше можно по названию фабрику найти и напрямую им писать или по картинке оттуда найти товар на 1688, там все по категориям разбито, можно для вдохновения там ползать)</p>
+        </div>
+
+        <p>База знаний и инструкций:</p>
+
+        <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+            <button type="button" class="image-lightbox-close" id="imageLightboxClose" aria-label="Закрыть просмотр">×</button>
+            <img id="imageLightboxContent" src="" alt="">
+        </div>
+    </div>
+    <script>
+        (function () {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImage = document.getElementById('imageLightboxContent');
+            const lightboxClose = document.getElementById('imageLightboxClose');
+            const lessonImages = document.querySelectorAll('.container img:not(#imageLightboxContent)');
+            let currentScale = 1;
+
+            function applyZoom() {
+                lightboxImage.style.transform = `scale(${currentScale})`;
+            }
+
+            function resetZoom() {
+                currentScale = 1;
+                applyZoom();
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('is-open');
+                lightbox.setAttribute('aria-hidden', 'true');
+                lightboxImage.src = '';
+                lightboxImage.alt = '';
+                document.body.style.overflow = '';
+                resetZoom();
+            }
+
+            function openLightbox(image) {
+                lightboxImage.src = image.src;
+                lightboxImage.alt = image.alt || '';
+                lightbox.classList.add('is-open');
+                lightbox.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+                resetZoom();
+            }
+
+            lessonImages.forEach((image) => {
+                image.addEventListener('click', () => openLightbox(image));
+            });
+
+            lightboxClose.addEventListener('click', closeLightbox);
+
+            lightbox.addEventListener('click', (event) => {
+                if (event.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            lightbox.addEventListener('wheel', (event) => {
+                if (!lightbox.classList.contains('is-open')) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                const zoomStep = event.deltaY < 0 ? 0.15 : -0.15;
+                currentScale = Math.min(4, Math.max(1, currentScale + zoomStep));
+                applyZoom();
+            }, { passive: false });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+                    closeLightbox();
+                }
+            });
+        }());
+    </script>
+        </main>
+    </div>
+</body>
+</html>

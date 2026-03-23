@@ -1,0 +1,1009 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Глоссарий</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f5f5;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+            border-bottom: 3px solid #696BEE;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #2a2a2a;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #3a3a3a;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .highlighted {
+            background: #f0f4ff;
+            padding: 16px 20px;
+            border-left: 4px solid #696BEE;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .numbered-item {
+            padding: 12px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .numbered-item:last-child {
+            border-bottom: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: zoom-in;
+        }
+
+        .toc {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .toc li:last-child {
+            border-bottom: none;
+        }
+
+        strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 2px;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #696BEE;
+            border-radius: 2px;
+            width: 100%;
+        }
+
+        .image-lightbox {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+            background: rgba(17, 24, 39, 0.88);
+            z-index: 9999;
+        }
+
+        .image-lightbox.is-open {
+            display: flex;
+        }
+
+        .image-lightbox img {
+            max-width: min(95vw, 1400px);
+            max-height: 88vh;
+            margin: 0;
+            border-radius: 10px;
+            box-shadow: 0 16px 60px rgba(0,0,0,0.45);
+            cursor: default;
+            transform: scale(1);
+            transform-origin: center center;
+            transition: transform 0.08s ease-out;
+        }
+
+        .image-lightbox-close {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 44px;
+            height: 44px;
+            border: none;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.18);
+            color: #fff;
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .image-lightbox-close:hover {
+            background: rgba(255,255,255,0.28);
+        }
+    
+        body {
+            max-width: none;
+            margin: 0;
+            padding: 0;
+            background: #eef2ff;
+        }
+
+        .course-sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 260px;
+            z-index: 100;
+            overflow-y: auto;
+        }
+
+        .course-sidebar-inner {
+            background: #111827;
+            color: #fff;
+            min-height: 100%;
+            padding: 22px 16px 32px;
+            box-shadow: 4px 0 24px rgba(17, 24, 39, 0.18);
+        }
+
+        .lesson-layout {
+            margin-left: 260px;
+            padding: 32px 36px 60px;
+        }
+
+        .lesson-main {
+            max-width: 1060px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1060px;
+            margin: 0 auto;
+            border-radius: 20px;
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+        }
+
+        .course-sidebar-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.62);
+        }
+
+        .course-sidebar-title {
+            margin: 10px 0 18px;
+            font-size: 20px;
+            line-height: 1.25;
+            color: #fff;
+        }
+
+        .course-sidebar-back-link {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 18px;
+            padding: 10px 12px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.10);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .course-sidebar-back-link:hover {
+            background: rgba(255,255,255,0.16);
+        }
+
+        .course-progress-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 18px;
+            padding: 14px;
+            margin-bottom: 18px;
+        }
+
+        .course-progress-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: baseline;
+            font-size: 13px;
+        }
+
+        .course-progress-top strong {
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .course-progress-bar {
+            height: 8px;
+            background: rgba(255,255,255,0.12);
+            border-radius: 999px;
+            overflow: hidden;
+            margin: 12px 0 8px;
+        }
+
+        .course-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #818cf8, #c4b5fd);
+            border-radius: 999px;
+        }
+
+        .course-progress-meta {
+            color: rgba(255,255,255,0.7);
+            font-size: 12px;
+        }
+
+        .course-sidebar-section + .course-sidebar-section {
+            margin-top: 16px;
+        }
+
+        .course-sidebar-section-title {
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .course-sidebar-lessons {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .course-sidebar-lesson {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 14px;
+            text-decoration: none;
+            color: rgba(255,255,255,0.88);
+            background: rgba(255,255,255,0.04);
+            border: 1px solid transparent;
+            font-size: 14px;
+            line-height: 1.35;
+        }
+
+        .course-sidebar-lesson:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.08);
+        }
+
+        .course-sidebar-lesson.is-current {
+            background: rgba(129,140,248,0.24);
+            border-color: rgba(196,181,253,0.55);
+            color: #fff;
+        }
+
+        .course-sidebar-lesson.is-completed .course-sidebar-status {
+            background: #22c55e;
+            color: #052e16;
+        }
+
+        .course-sidebar-lesson.is-locked {
+            color: rgba(255,255,255,0.45);
+            background: rgba(255,255,255,0.03);
+        }
+
+        .course-sidebar-status {
+            flex: 0 0 auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.14);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .course-sidebar-status.locked {
+            background: rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.45);
+        }
+
+        .progress-fill {
+            width: 10%;
+        }
+
+        @media (max-width: 900px) {
+            .course-sidebar {
+                position: static;
+                width: 100%;
+                bottom: auto;
+            }
+
+            .course-sidebar-inner {
+                min-height: auto;
+                padding: 20px 16px;
+            }
+
+            .lesson-layout {
+                margin-left: 0;
+                padding: 20px;
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="lesson-layout">
+<aside class="course-sidebar">
+    <div class="course-sidebar-inner">
+        <div class="course-sidebar-label">Программа курса</div>
+        <h2 class="course-sidebar-title">Часть 1. Как, где и что считать?</h2>
+        <a class="course-sidebar-back-link" href="../index.html">Назад к курсу</a>
+        <div class="course-progress-card">
+            <div class="course-progress-top"><span>Прогресс preview</span><strong>3 из 30</strong></div>
+            <div class="course-progress-bar"><div class="course-progress-fill" style="width: 10%"></div></div>
+            <div class="course-progress-meta">10% пути по собранным урокам</div>
+        </div>
+        <div class="course-sidebar-sections">
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Общая информация</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson is-completed" href="s01-01-закупки-твой-план-адаптации.html"><span class="course-sidebar-status">1</span><span>Закупки. Твой план адаптации</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s01-02-о-ч-м-этот-курс.html"><span class="course-sidebar-status">2</span><span>О чём этот курс?</span></a>
+                    <a class="course-sidebar-lesson is-current" href="s01-03-глоссарий.html"><span class="course-sidebar-status">3</span><span>Глоссарий</span></a>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Основные инструменты работы</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson" href="s02-01-ресурсы-для-поиска-товаров.html"><span class="course-sidebar-status">4</span><span>Ресурсы для поиска товаров</span></a>
+                    <a class="course-sidebar-lesson" href="s02-02-методы-поиска-товаров.html"><span class="course-sidebar-status">5</span><span>Методы поиска товаров</span></a>
+                    <a class="course-sidebar-lesson" href="s02-03-методы-определения-качества-фабрики-хорошие-фабрики.html"><span class="course-sidebar-status">6</span><span>Методы определения качества фабрики. Хорошие фабрики</span></a>
+                    <a class="course-sidebar-lesson" href="s02-04-методы-определения-качества-фабрики-плохие-фабрики.html"><span class="course-sidebar-status">7</span><span>Методы определения качества фабрики. Плохие фабрики</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Тест по определению качества фабрики <em>(Онлайн-тест)</em></span></div>
+                    <a class="course-sidebar-lesson" href="s02-06-лайфхаки-по-общению-с-фабриками.html"><span class="course-sidebar-status">8</span><span>Лайфхаки по общению с фабриками</span></a>
+                    <a class="course-sidebar-lesson" href="s02-07-шпаргалка-для-новичков-диалог-с-фабрикой.html"><span class="course-sidebar-status">9</span><span>Шпаргалка для новичков - диалог с фабрикой</span></a>
+                    <a class="course-sidebar-lesson" href="s02-08-наш-офис-в-китае-кто-такой-тони.html"><span class="course-sidebar-status">10</span><span>Наш офис в Китае. Кто такой Тони</span></a>
+                    <a class="course-sidebar-lesson" href="s02-09-правила-поведения-в-wechat.html"><span class="course-sidebar-status">11</span><span>Правила поведения в WeChat</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Рефлексия <em>(Задание)</em></span></div>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Хороший расчет</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson" href="s03-01-работа-с-просчетом-в-planfix.html"><span class="course-sidebar-status">12</span><span>Работа с просчетом в Planfix</span></a>
+                    <a class="course-sidebar-lesson" href="s03-02-как-самостоятельно-поставить-задачу-на-просчет.html"><span class="course-sidebar-status">13</span><span>Как самостоятельно поставить задачу на просчет</span></a>
+                    <a class="course-sidebar-lesson" href="s03-03-навигатор-по-шапке-planfix.html"><span class="course-sidebar-status">14</span><span>Навигатор по шапке Planfix</span></a>
+                    <a class="course-sidebar-lesson" href="s03-04-mockups-генератор-и-галерея-мокапов-3-0.html"><span class="course-sidebar-status">15</span><span>Mockups. Генератор и галерея мокапов 3.0</span></a>
+                    <a class="course-sidebar-lesson" href="s03-05-проработка-запроса-удели-внимание-клиенту.html"><span class="course-sidebar-status">16</span><span>Проработка запроса: удели внимание клиенту!</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Оформление презентации <em>(Лонгрид)</em></span></div>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Копилка презентаций <em>(Лонгрид)</em></span></div>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Рефлексия <em>(Задание)</em></span></div>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Инструкция по работе с калькулятором Headcorn</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson" href="s04-01-1-навигация-и-логика-системы-headcorn.html"><span class="course-sidebar-status">17</span><span>1. Навигация и логика системы Headcorn</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>2. Проект и позиция: старт расчёта <em>(Лонгрид)</em></span></div>
+                    <a class="course-sidebar-lesson" href="s04-03-3-работа-с-фабриками-и-ai-парсер.html"><span class="course-sidebar-status">18</span><span>3. Работа с фабриками и AI-парсер</span></a>
+                    <a class="course-sidebar-lesson" href="s04-04-4-логистика-вэд-и-себестоимость.html"><span class="course-sidebar-status">19</span><span>4. Логистика, ВЭД и себестоимость</span></a>
+                    <a class="course-sidebar-lesson" href="s04-05-5-клиентская-часть-цены-и-кп.html"><span class="course-sidebar-status">20</span><span>5. Клиентская часть: цены и КП</span></a>
+                    <a class="course-sidebar-lesson" href="s04-06-6-дополнительные-функции-проекта-и-международные-просч-ты.html"><span class="course-sidebar-status">21</span><span>6. Дополнительные функции проекта и международные просчёты</span></a>
+                    <a class="course-sidebar-lesson" href="s04-07-7-типовые-сценарии-работы-словарь-терминов-калькулятора-headcorn.html"><span class="course-sidebar-status">22</span><span>7. Типовые сценарии работы. Словарь терминов калькулятора Headcorn</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Рефлексия <em>(Задание)</em></span></div>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Способы доставки</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson" href="s05-01-виды-маршрутов-постоянные-категории-товаров.html"><span class="course-sidebar-status">23</span><span>Виды маршрутов. Постоянные категории товаров</span></a>
+                    <a class="course-sidebar-lesson" href="s05-02-виды-маршрутов-новая-категория-товара.html"><span class="course-sidebar-status">24</span><span>Виды маршрутов. Новая категория товара</span></a>
+                    <a class="course-sidebar-lesson" href="s05-03-виды-маршрутов-международная-доставка.html"><span class="course-sidebar-status">25</span><span>Виды маршрутов. Международная доставка</span></a>
+                    <a class="course-sidebar-lesson" href="s05-04-чек-лист.html"><span class="course-sidebar-status">26</span><span>Чек-лист</span></a>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Сертификаты</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson" href="s06-01-сертификация.html"><span class="course-sidebar-status">27</span><span>Сертификация</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Понимание сертификации <em>(Онлайн-тест)</em></span></div>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Ценообразование</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson" href="s07-01-ценообразование-прайсинг-работа-с-ценой.html"><span class="course-sidebar-status">28</span><span>Ценообразование, прайсинг, работа с ценой</span></a>
+                    <a class="course-sidebar-lesson" href="s07-02-когда-повышать-когда-снижать-цену.html"><span class="course-sidebar-status">29</span><span>Когда повышать, когда снижать цену</span></a>
+                    <a class="course-sidebar-lesson" href="s07-03-сложные-категории-товаров.html"><span class="course-sidebar-status">30</span><span>Сложные категории товаров</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Рефлексия <em>(Задание)</em></span></div>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">KPI</div>
+                <div class="course-sidebar-lessons">
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Система KPI менеджеров по Китаю <em>(Лонгрид)</em></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+        <main class="lesson-main">
+    <div class="container">
+        <h1>Глоссарий</h1>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="toc">
+            <h3>Содержание:</h3>
+            <ul>
+                <li>• Популярные китайские термины</li>
+            </ul>
+        </div>
+
+        <p>Посмотрите глоссарий понятий в компании, чтобы лучше понимать о чем говорят коллеги (если ты услышал специфический термин, но его нет - пиши , он будет рад добавить его в список).</p>
+
+        <p>Обрати внимание, тебе не нужно заучивать термины наизусть! Но теперь ты всегда будешь знать, куда обратиться, если услышал что-то непонятное. А теперь можно просто пробежаться взглядом по файлу и узнать что-то новое для себя.</p>
+
+        <p><strong>Термин</strong></p>
+
+        <p><strong>Термин</strong></p>
+
+        <p><strong>Описание</strong></p>
+
+        <p><strong>Акт сверки</strong></p>
+
+        <p>Акт сверки ― это документ, который формируется на основании данных бухгалтерского учета, выявления разницы между поступлениями и расходами по каждому заказу. С помощью акта сверки мы проверяем, получили ли мы оплаты по всем счетам, а клиент сверяет получение товара и свои оплаты. Клиенты обычно запрашивают у нас акты сверки при закрытии квартального отчета перед налоговой. Акты сверки нужно запрашивать у Насти Василевской.</p>
+
+        <p><strong>Артворк, макет</strong></p>
+
+        <p>Технический файл, обычно в векторном формате AI, PDF, PSD, EPS, CDR. Содержит макет коробки, устройства или носителя для нанесения логотипа</p>
+
+        <p><strong>AI-парсер ответов фабрик</strong></p>
+
+        <p>Инструмент в калькуляторе, который автоматически вытаскивает данные из:</p>
+
+        <p>текстовой переписки;</p>
+
+        <p>файлов (Excel, PDF);</p>
+
+        <p>ссылки на товар 1688. Парсер заполняет поля запроса фабрике (цены, сроки, пакинг, образцы, описания, фото) и создаёт запрос почти без ручного ввода.</p>
+
+        <p><strong>Битрикс</strong></p>
+
+        <p>CRM-система Иллана, как наш планфикс. Все задачи и общение с Илланом проходит в задачах в Битрикс</p>
+
+        <p><strong>Брокер</strong></p>
+
+        <p>Брокер - юридическое лицо, выполняющее посреднические функции между продавцом и покупателем. В нашем случае это Хай Вэй, наш логистический и таможенный брокер</p>
+
+        <p><strong>Вектор, векторное изображение</strong></p>
+
+        <p>Векторные изображения - нарисованы с помощью математических формул. Векторное изображение можно увеличить до любого размера — и это никак не отразится на его качестве. Форматы: pdf, ai, cdr, svg Нам эта информация нужна для того, чтобы предоставить фабрике логотип правильного формата и сделать качественное нанесение. Примеры макетов - вектор:</p>
+
+        <p><strong>Гендерные праздники</strong></p>
+
+        <p>Так мы называем 8 марта и 23 февраля</p>
+
+        <p><strong>ГТД</strong></p>
+
+        <p>Грузовая таможенная декларация - представляет собой юридический документ, представляемый таможенным органам для декларирования содержимого, стоимости и другой информации о товарах, перевозимых через международные границы. Эта декларация предоставляет таможенным органам необходимую информацию для оценки пошлин и налогов и обеспечивает соблюдение торговых правил.</p>
+
+        <p><strong>Договор</strong></p>
+
+        <p>Соглашение между собой двух или более сторон, по какому-либо вопросу с целью установления, изменения или прекращения правовых отношений. С каждым новым клиентом мы составляем договор, он переподписывается каждый год, и будет единым для всех заказов между указанными в нем юр лицами.</p>
+
+        <p><strong>ДС</strong></p>
+
+        <p>Декларация соответствия (ДС) - стоимость около 15 тыс руб., время оформления 2 недели, необходима для провоза обуви, текстильный продукции, посуды, мелкой электроники;</p>
+
+        <p><strong>Dashboard (Личный кабинет)</strong></p>
+
+        <p>Стартовый экран после входа в калькулятор. Показывает:</p>
+
+        <p>сводную статистику по проектам и позициям;</p>
+
+        <p>блок «Требует внимания»;</p>
+
+        <p>список своих проектов;</p>
+
+        <p>последние посчитанные позиции.</p>
+
+        <p><strong>Закрывашка, отгрузочные документы, накладная, отгрузка</strong></p>
+
+        <p>Закрывающие документы — перечень бумаг, которые стороны должны подписать при окончательном завершении сделки.У нас это подписанные при приеме документы об отгрузке. Составляет этот документ менеджер по Китаю, а заветную подпись добывает Саша (наш логист). Делится на УПД и ТОРГ12.</p>
+
+        <p><strong>Закрыть проект</strong></p>
+
+        <p>Закрыть проект - значит свести все цифры в один файл и посчитать общую выручку с заказа. Менеджеры закрывают свои проекты самостоятельно, нужно это для расчета зарплаты, и для ведения статистики проектов.</p>
+
+        <p><strong>Запрос фабрике</strong></p>
+
+        <p>Карточка с данными от конкретной фабрики по одной позиции. Содержит: контакты (WeChat, URL), комментарии, условия по образцу, упаковку, расчёт по тиражам, фото товара. У одной позиции может быть несколько запросов (разные фабрики или варианты).</p>
+
+        <p><strong>Иллан</strong></p>
+
+        <p>Это наш крупный клиент - рекламное агентство. Многие крупные компании работают с нами через посредников в виде рекламных агентств - это как раз Иллан. В случае поступления запроса на расчет или производство от Иллана, они выступают нашим клиентом. Поэтому вся коммуникация выстраивается как и с любым другим прямым клиентом.</p>
+
+        <p><strong>Карго</strong></p>
+
+        <p>Еще один способ доставки, работает когда нужно найти способ снизить цену. Этот способ доставки НЕ подходит если товар везется в Россию на продажу. Чаще используется для товаров на подарки или товаров, которые не берет к провозу ХВ. Считается по ссылке:</p>
+
+        <p><strong>Категория</strong></p>
+
+        <p>Группа товаров одного типа (термокружка, рюкзак, блокнот и т.д.). От категории зависят:</p>
+
+        <p>статистика (типичная плотность, диапазон цен, веса и тиражей);</p>
+
+        <p>набор обязательных документов (ДС, СС, Честный знак);</p>
+
+        <p>логистическая ставка. Если подходящей категории нет, используется «Новая категория».</p>
+
+        <p><strong>Новая категория</strong> Категория-заглушка для товаров, которые ещё не заведены в общий справочник. По ней нет готовых ставок логистики и документов — почти всё согласуется индивидуально с ВЭД.</p>
+
+        <p><strong>Кастомизация</strong></p>
+
+        <p>Настройка товара согласно макету клиента, это может быть логотип или полная настройка, включая цвет, материал, добавление доп. деталей и тд.</p>
+
+        <p><strong>Квартал</strong></p>
+
+        <p>Разные виды отчётов сдаются с различной периодичностью: за месяц, за три месяца, за год. Отчётность за период длиной в три месяца называется квартальной. Сдаются след. документы: в ФНС ежеквартально сдаются расчёты 6-НДФЛ и РСВ, декларацию по налогу на прибыль, декларация по НДС, квартальная отчетность по сотрудникам и так далее. Занимается этими умными вещами Настя. Иногда ты можешь увидеть от нее сообщение в общем чате о том, что она закрывает квартал или год. Обо всех изменениях в документах (например Мой склад) после обозначенной даты нужно сообщать отдельно. Нужно этого для того чтобы существующие документы бились с теми, что сданы в отчетность. В это же время клиенты могут запросить акт сверки.</p>
+
+        <p><strong>КНГ</strong></p>
+
+        <p>Сокращение для "Китайский новый год" Официально китайский Новый год длится неделю, а точные даты праздника зависят от лунного календаря и меняются каждый год. Например, в 2023 году день празднования выпадал на 22 января, в 2024 на 10 февраля, а в 2025 году Новый год будет отмечаться 29 января.</p>
+
+        <p><strong>Контрагент, КА</strong></p>
+
+        <p>Контрагент - одна из сторон договора. Наши клиенты - это наши контрагенты</p>
+
+        <p><strong>Контракт / Контракт под риск / Спецусловия</strong></p>
+
+        <p>Типы маршрутов через Highway:</p>
+
+        <p><strong>Контракт</strong> — стандартное оформление по договору;</p>
+
+        <p><strong>Контракт под риск</strong> — повышенные риски/особые условия, как правило, с другими ставками и требованиями. Для крупных и сложных грузов по этим опциям обязательно запрашиваем ставки у ВЭД/Highway.</p>
+
+        <p><strong>Спецусловия</strong> Индивидуальные условия, которые Highway может посчитать для крупных грузов (~от 500 кг).</p>
+
+        <p><strong>Контур.Диадок</strong></p>
+
+        <p>см. ЭДО Система электронного документооборота Контур.Диадок позволяет формировать, отправлять, получать и подписывать любые электронные документы</p>
+
+        <p><strong>Копилка</strong></p>
+
+        <p>Это кладезь полезной информации для отдела закупок и отдела продаж. Здесь собраны несколько вкладок, которые могут сильно упростить тебе жизнь и сократить время на расчет, а также помогут быстро сориентировать клиента по тиражам и ценам.Каталоги фабрик, Наши подборки, Справочник фабрик, Просчеты, Визитки фабрик с выставки.</p>
+
+        <p><strong>КП</strong></p>
+
+        <p>Коммерческое предложение. Иногда клиенты приходят к нам с конкретным запросом и точными макетами. Но чаще у клиента есть абстрактное понимания того, что ему нужно или он готов рассмотреть аналоги. В любом случае мы подготавливаем наше коммерческое предложение для клиента. Мы можем предоставить КП в виде расчета или презентации, все зависит от целей сроков и количества позиций. Зная специализацию клиента мы можем сами периодически предлагать интересные товары, тем самым повышая уровень продаж. Пример кп на бланке компании:</p>
+
+        <p><strong>Кривые, в кривых</strong></p>
+
+        <p>«Кривые» – это состояние шрифта в векторном макете (ai, pdf, eps). Если шрифт не в кривых – надписи можно редактировать, но на компьютере должен быть установлен этот шрифт, иначе он «слетит». Шрифт «в кривых» – это векторный объект. Если открыть такой макет на другом компьютере – шрифты не слетят, но надписи будет не отредактировать. Если не перевести в кривые – вместо нужных шрифтов могут подставиться другие.Это про текст, переведенный «в кривые» – одно из обычных требований типографии к векторному макету для печати.Применимо к векторным форматам PDF, AI, EPS. Не применимо к растровым форматам – TIFF, JPEG – т.к. там точки, а не кривые.</p>
+
+        <p><strong>Маржа</strong></p>
+
+        <p>Маржа - разница между ценой и себестоимостью, т.е. наш доход от заказа. Ты узнаешь ее после того, как закроешь проект.</p>
+
+        <p><strong>Маршрут</strong></p>
+
+        <p>Способ доставки партии товара. Примеры маршрутов:</p>
+
+        <p>Highway Авто / Авиа;</p>
+
+        <p>Контракт / Контракт под риск;</p>
+
+        <p>Prologix (разные варианты);</p>
+
+        <p>Контейнер 20ft;</p>
+
+        <p>Direct Air;</p>
+
+        <p>КАРГО;</p>
+
+        <p><strong>Свой маршрут.</strong> Для каждого маршрута система считает себестоимость, сроки и структуру затрат.</p>
+
+        <p><strong>Образец качества</strong></p>
+
+        <p>Это готовый образец с фабрики без какой-либо кастомизации, из наличия.</p>
+
+        <p><strong>Образец предтиражный, сигнальный, сигнальник</strong></p>
+
+        <p>Перед заказом тиража товара по макету клиента необходимо произвести пред тиражный (сигнальный) образец. Его отправляем в Москву или согласовываем по фото. В дальнейшем всем будет проще, так как и фабрика, и мы будем знать, что ожидать и от чего отталкиваться при запуске тиража. Изделия из тиража будут сравниваться с сигнальным образом.</p>
+
+        <p><strong>Образец, сэмпл, пробник</strong></p>
+
+        <p>Заказываем с фабрики перед запуском тиража, бывают нескольких видов</p>
+
+        <p><strong>Пантон, Pantone</strong></p>
+
+        <p>Цветовая модель Пантон, система PMS (Pantone Matching System) — стандартизованная система подбора цвета. У больших фабрик всегда есть раскладка цветов - палитраТак как мы не можем быть уверены в цветопередаче разных моделей телефонов, мы часто запрашиваем фото рядом с цветовой картой Пантон. В таком случае мы можем быть уверены, что цвет товара соответствует тому, который мы искали или производили</p>
+
+        <p><strong>Пантонник</strong></p>
+
+        <p>Веер цветов пантона, см. пантон</p>
+
+        <p><strong>Под полную, под наш контракт</strong></p>
+
+        <p>Это перерасчет логистики с целью снижения цены Под полную считаем в двух случаях: Когда у вас большой тираж и нужна минимальная цена Когда у вас уже есть заказ. В таком случае можно посчитать под полную, чтобы оптимизировать расходы на доставку и повысить маржу с проекта.</p>
+
+        <p><strong>Позиция</strong></p>
+
+        <p>Конкретный товар внутри проекта. Например: «Термокружка 500 мл», «Тестовая позиция». У позиции есть: категория, тиражи, запросы фабрикам, статистика по категории, матрица цен и блок настроек для КП (фото, описание, варианты цен и сроков).</p>
+
+        <p><strong>ПП</strong></p>
+
+        <p>Производственный план - Как правильно оформить смотри тут:</p>
+
+        <p><strong>Приложение, Спецификация</strong></p>
+
+        <p>Документ, который прилагается к договору. В нем прописаны все тиражи, цены с и без НДС, сроки поставки, описан и показан дизайн того, что мы везем. Если мы говорим про Иллан, они составляют приложение сами, и отправляют нам на подпись. Нам нужно внимательно все проверить, цены даты и описание. Производство тиража мы запускаем после подписание приложения (но лучше после получения оплаты)</p>
+
+        <p><strong>Проект</strong></p>
+
+        <p>Пространство для работы по одному клиентскому запросу. Включает в себя описание задачи, файлы из Planfix, набор позиций, расчёты логистики, матрицу цен и коммерческое предложение (КП). Все действия — от первого просчёта до выгрузки КП — происходят внутри проекта.</p>
+
+        <p><strong>Prologix</strong></p>
+
+        <p>Отдельный логистический брокер. Маршруты с названием Prologix в таблице маршрутов используют его ставки и логику доставки.</p>
+
+        <p><strong>Разрешение на вынос из офиса</strong></p>
+
+        <p>Документ, который нужно подписать в офисе, чтобы охрана выпустила из здания с образцами</p>
+
+        <p><strong>Разрешительное письмо, письмо на ввоз</strong></p>
+
+        <p>Или письмо правообладателя. Запрашивается у клиента в том случае, когда мы используем Лого. Оно дает нам право на ввоз на территорию страны продукции с зарегистрированным товарным знаком. Важно получить это письмо от клиента заранее, поскольку оно служит юридическим доказательством разрешения на использование логотипа. Без письма товар не будет допущен к ввозу на территорию страны. Письмо заполняется на бланке компании правообладателя. Пример письма:</p>
+
+        <p><strong>Растр, растровое изображение</strong></p>
+
+        <p>Растровое изображение - это пиксельные изображения, состоящие из крошечных цветных точек. За каждым пикселем закрепляется его точное расположение и оттенок. В отличие от векторного всегда теряет качество при увеличении (становится мутным или пиксели становятся ярко выраженными)Форматы: JPEG, JPG, PNG Примеры макетов - растр:</p>
+
+        <p><strong>Рендер, рендерное фото</strong></p>
+
+        <p>Рендеринг (от англ. - «визуализация») - это реалистичное изображение товара на Алибаба. Не всегда понятно, что ты видишь в карточке товара, это может быть хорошо отфотошопленное фото или рендер, поэтому мы запрашиваем реальное фото товара у поставщика.</p>
+
+        <p><strong>Рыба</strong></p>
+
+        <p>Например "рыба договора" - первоначальная версия договора, шаблон или черновик, который нужно заполнить под клиента.</p>
+
+        <p><strong>СБИС</strong></p>
+
+        <p>см ЭДОСБИС Электронный документооборот — электронная подпись и обмен документами между компаниями, внутри компании и c обыкновенными людьми</p>
+
+        <p><strong>Сводка</strong></p>
+
+        <p>Файл, который мы предоставляем клиенту или фабрике, в нем мы прописываем все детали по заказу, для того чтобы убедиться, что все детали учтены и поняты правильно. Именно на него мы будем ссылаться при возникновении вопросов производства. Это важный документ, особенно, когда речь идет о производстве сложной кастомизации или нового продукта. Суть документа в том чтобы расписать фабрике все (даже неважные на первый взгляд) моменты: нанесения, размеры, упаковка, прописать и показать наглядно как надо и как не надо, прописать тиражи, сроки, что будет считаться браком ..... Подробнее о том, как составить сводку здесь:</p>
+
+        <p><strong>СГР</strong></p>
+
+        <p>Свидетельство о гос. регистрации товара (СГР) - этот документ индивидуален для каждого продукта, ориентировочная стоимость 100 тыс руб., время оформления около 4 месяцев. Это документ делается единоразово на конкретный товар и действует в течении 5 лет. СГР необходимо для провоза продукции, предназначенной для детей, косметической и пищевой продукции, медицинского оборудования и предметов личной гигиены.</p>
+
+        <p><strong>Смик, CMYK</strong></p>
+
+        <p>CMYK – цветовая модель, которая продуктивно применяются в полиграфии. Это аббревиатура – первые буквы главных цветов, которые в нее включены, кроме последней: C – голубой; M – маджента – ряд пурпурных цветов; Y – желтый; K – печатная форма для черного цвета или проще черный. Мы передаем значения CMYK фабрике, когда нам необходимо добиться определенного цвета. При первичном расчете можно просто обозначить количество используемых цветов, например: 3+1. Подробнее по ссылке:</p>
+
+        <p><strong>СС</strong></p>
+
+        <p>Сертификат соответствия (СС) - стоимость около 85 тыс руб., время оформления 3 недели, необходим для провоза медицинского и кухонного оборудования, мелкой электроники, детских игрушек, лакокрасочной и косметической продукции;</p>
+
+        <p><strong>Ставка</strong></p>
+
+        <p>Ставка - это стоимость доставки, обозначается цифрой и используется в таблице расчетов для расчета стоимости товара. Считают ставки наш логист Денис и менеджеры ХВ по предоставленным нами данным. Вес, объем, плотность и материал товара влияют на ставку. В цену доставки (или ставку) уже включены все таможенные траты, при необходимости оформления дополнительных документов, менеджеры ХВ пропишут это в таблице рядом со ставкой и выделят красным цветом (если вдруг такой огонек загорелся в строке с твоим товаром, не забудь предупредить руководителя или клиента)</p>
+
+        <p><strong>Статистика по категории</strong></p>
+
+        <p>Агрегированные данные по всем ранее посчитанным позициям в этой категории: типичная плотность, диапазон цен, вес, тиражи. Используется как «здравый смысл» — помогает заметить ошибки в данных фабрики.</p>
+
+        <p><strong>Структура затрат</strong></p>
+
+        <p>Разложение итоговой себестоимости по статьям: стоимость товара, доставка по Китаю, международная логистика, пошлины, документы, доп. расходы и т.п. Помогает понять, где искать снижение цены — в товаре или в логистике.</p>
+
+        <p><strong>Счет, инвойс</strong></p>
+
+        <p>Мы выставляем счета через Мой Склад. Каждый счет выставляется с разных юр. лиц. на разные юр. лица, для постоянных клиентов выбор юр. лиц почти всегда одинаковый. Выбор юр. лица с которого мы выставляем счет для нового клиента, нужно согласовать с руководителем. В счете перечисляем все позиции заказа, их количество, проценты НДС. Сохраняем через Мой Склад и отправляем клиенту на оплату.</p>
+
+        <p><strong>Таргет</strong></p>
+
+        <p>Целевая цена. Это та цена, на которую рассчитывает клиент при отправке запроса на просчет. Наша общая позиция - хотим угадать пожелания клиента по цене и предоставить наиболее подходящее коммерческое предложение. Для этого мы спрашиваем у него таргет, бюджет, ожидания, какие цены клиенту называли. Подробнее о ценовой политике по ссылке:</p>
+
+        <p><strong>Тендер</strong></p>
+
+        <p>Заказы крупных компаний или высокобюджетные заказы как правило выставляются на тендер. На тендерах заранее объявляются все условия и требования к товару и срокам производства, делается это для создания конкурентной среды. Проще говоря, объявляется конкурс. Компания, предложившая самые выгодные условия, подходящие под запрос клиента, забирает заказ.</p>
+
+        <p><strong>ТЗ</strong></p>
+
+        <p>Техническое задание. Это то, что мы получаем от клиента для начала расчета. В идеале для хорошего расчета нужно подробное ТЗ, если у вас его нет, узнайте ответы нужные для хорошего расчета у клиента (позиция, тираж, кастомизация, материалы, детали на которые стоит обратить внимание, предпочтения по бюджету)</p>
+
+        <p><strong>Тип проекта «Межнар»</strong></p>
+
+        <p>Международный проект (Дубай и др. страны), логистика считается по индивидуальным ставкам, финальные цены — в долларах, КП на английском.</p>
+
+        <p><strong>Тип проекта «РФ»</strong></p>
+
+        <p>Стандартный проект с доставкой в Россию, логистика считается в рублях, КП на русском.</p>
+
+        <p><strong>ТНВЭД</strong></p>
+
+        <p>Коды Товарной номенклатуры внешнеэкономической деятельности, или Коды ТН ВЭД, представляют собой стандартизированную систему, используемую для классификации товаров международной торговли. Эти коды присваиваются конкретным продуктам в зависимости от их характеристик, состава и предполагаемого использования. Система кодов используется таможенными органами по всему миру для облегчения классификации, документирования и регулирования продаваемых товаров.</p>
+
+        <p><strong>ТОРГ12</strong></p>
+
+        <p>Товарная накладная. Делаем для ИП. Документ, с помощью которого оформляют отгрузку материальных ценностей. Мы составляем этот документ перед отгрузкой товара клиенту и отправляем в группу и на печать Насте. Для того чтобы Саша забрал документ и отвез груз до клиента.</p>
+
+        <p><strong>ТТ, тех требования</strong></p>
+
+        <p>Это то, что мы запрашиваем у фабрики, если клиент создает макет самостоятельно. Здесь важно знать, что можно и что нельзя сделать, какие могут быть максимальные и минимальные размеры нанесения и т.д. В целом, нужно прояснить все технические возможности фабрики, дабы клиенту не пришлось переделывать макет Пример того, как отдавать ТТ: Бандана, поясная сумка, ручка: минимальная толщина элементов 0,15 мм; минимальная плотность растра 10 %; разрешение растрового изображения 300–600 dpi Ланьярд: минимальная толщина позитивных элементов 0,15 мм, негативных элементов (выворотки) 0,3 мм; минимальная плотность растра 8%; сумма красок CMYK не более 330 %; разрешение растрового изображения 300–600 dpi Шопер: Минимальная толщина позитивных элементов 0,5 мм без учета подложки и 0,6 мм с подложкой, негативных элементов (выворотки) 0,7 мм; минимальный размер одиночного элемента 0,7х0,7 мм; минимальная плотность растра 20 % Термокружка: минимальная толщина позитивных и негативных (выворотка) элементов 0,15 мм; минимальная плотность растра 20 %; разрешение растрового изображения 300 dpi. Для макетов, содержащих мелкие элементы, рекомендуем разрешение от 600 до 1200 dpi Размер деколи не должен превышать 15*15см Формат файлов pdf высокой четкости или ai Толщина линий от 0,15мм"</p>
+
+        <p><strong>УПД</strong></p>
+
+        <p>Универсальный передаточный документ. Делаем для ООО. Совмещает в себе счет-фактуру и накладную на отгрузку товаров. В УПД содержатся все реквизиты, характерные для счета-фактуры, а также дополнительная информация о хозяйственной операции (данные о транспортировке и грузе, ответственные лица и т. п.). Мы составляем этот документ перед отгрузкой товара клиенту и отправляем в группу и на печать Насте. Для того чтобы Саша забрал документ и отвез груз до клиента</p>
+
+        <p><strong>ХВ, Хай Вэй</strong></p>
+
+        <p>Хай Вэй - это логистическая компания, она же таможенный брокер, через которую мы возим основную часть наших заказов. У нас есть специальная таблица, в ней мы прописываем все необходимые данные, а логисты в свою очередь дают нам ставку, задают уточняющие вопросы по товару и предупреждают о необходимости оформления дополнительных документов.</p>
+
+        <p><strong>ЧЗ, Честный Знак</strong></p>
+
+        <p>Национальная система цифровой маркировки и прослеживаемости товаров Центра развития перспективных технологий, созданного для реализации глобальных проектов в цифровой экономике Основная задача системы Честный знак — гарантировать потребителям подлинность и заявленное качество приобретаемой продукции Для таких продуктов стоит сделать небольшой запас времени (на прохождение таможни)Товары для обязательной маркировки: одежда (в том числе из меха и кожи), обувь, фотоаппараты, автопокрышки, шины Внимательнее к товарам: БАДы, антисептики, велосипеды и кресла-коляски</p>
+
+        <p><strong>ЭДО</strong></p>
+
+        <p>Электронный ДокументоОборот. Через него мы с клиентами обмениваемся договорами, счетами, приложениями, закрывающими документами, актами сверок. Обмен происходит онлайн, документы подписываются электронной подписью, отпадает необходимость обмениваться физическими документами. Чаще всего клиент просит нас дублировать физические документы в ЭДО. Чтобы это сделать, вам нужно скинуть Насте В в личные сообщения документы, которые нужно выгрузить. Для обмена мы используем Контур Диадок или СБИС (его очень редко). Подробнее о том, как сделать это правильно говорим в уроке - ЭДО. Инструкция.</p>
+
+        <p><strong>Термин</strong></p>
+
+        <p><strong>Термин</strong></p>
+
+        <p><strong>Перевод</strong></p>
+
+        <p><strong>价格</strong></p>
+
+        <p>цена</p>
+
+        <p><strong>重量</strong></p>
+
+        <p>вес</p>
+
+        <p><strong>交货期 （交货期是多少？）</strong></p>
+
+        <p>срок производства</p>
+
+        <p><strong>打样</strong></p>
+
+        <p>сделать пробник</p>
+
+        <p><strong>打样费</strong></p>
+
+        <p>плата за пробник</p>
+
+        <p><strong>定制</strong></p>
+
+        <p>делать на заказ, to customize</p>
+
+        <p><strong>印制</strong></p>
+
+        <p>нанесение</p>
+
+        <p><strong>加印logo</strong></p>
+
+        <p>нанести логотип</p>
+
+        <p><strong>不含税运 (EXW)</strong></p>
+
+        <p>не считая налог и доставку (китайцы часто спрашивают, учитывать ли их в цене - не нужно)</p>
+
+        <p><strong>压花纹</strong></p>
+
+        <p>тиснение</p>
+
+        <p><strong>PU</strong></p>
+
+        <p>экокожа</p>
+
+        <p><strong>刀模图</strong></p>
+
+        <p>макет-развертка для упаковок</p>
+
+        <p><strong>设计稿</strong></p>
+
+        <p>векторный макет</p>
+
+        <p><strong>效果图</strong></p>
+
+        <p>визуал</p>
+
+        <p><strong>格式图</strong></p>
+
+        <p>изображение в векторе</p>
+
+        <p><strong>触感膜</strong></p>
+
+        <p>покрытие софт тач</p>
+
+        <p><strong>产品参数</strong></p>
+
+        <p>технические параметры</p>
+
+        <p><strong>外箱尺寸，重量，数量</strong></p>
+
+        <p>пакинг (размер, вес и кол-во коробок)</p>
+
+        <p><strong>唛头</strong></p>
+
+        <p>маркировка</p>
+
+        <p><strong>单号</strong></p>
+
+        <p>трек-номер</p>
+
+        <p><strong>丝网印刷</strong></p>
+
+        <p>шелкография</p>
+
+        <p><strong>UV印制</strong></p>
+
+        <p>УФ печать</p>
+
+        <p><strong>刷色印刷</strong></p>
+
+        <p>тампопечать</p>
+
+        <p><strong>热转印</strong></p>
+
+        <p>термотрансферная печать</p>
+
+        <p><strong>纸花</strong></p>
+
+        <p>деколь</p>
+
+        <p><strong>OPP包装</strong></p>
+
+        <p>пластиковый пакетик (самая простая упаковка, прозрачный пакетик)</p>
+
+        <p><strong>内衬</strong></p>
+
+        <p>ложемент</p>
+
+        <p><strong>毛重</strong></p>
+
+        <p>вес брутто (общая масса товара, включая все виды упаковки)</p>
+
+        <p><strong>净重</strong></p>
+
+        <p>вес нетто (вес товара без учёта упаковки)</p>
+
+        <p><strong>内衬包装</strong></p>
+
+        <p>упаковка с ложементом</p>
+
+        <p>Больше полезных терминов ты сможешь найти в части - Кастомизация. База знаний и инструкций: Материалы для этого урока взяты из инструкции:</p>
+
+        <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+            <button type="button" class="image-lightbox-close" id="imageLightboxClose" aria-label="Закрыть просмотр">×</button>
+            <img id="imageLightboxContent" src="" alt="">
+        </div>
+    </div>
+    <script>
+        (function () {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImage = document.getElementById('imageLightboxContent');
+            const lightboxClose = document.getElementById('imageLightboxClose');
+            const lessonImages = document.querySelectorAll('.container img:not(#imageLightboxContent)');
+            let currentScale = 1;
+
+            function applyZoom() {
+                lightboxImage.style.transform = `scale(${currentScale})`;
+            }
+
+            function resetZoom() {
+                currentScale = 1;
+                applyZoom();
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('is-open');
+                lightbox.setAttribute('aria-hidden', 'true');
+                lightboxImage.src = '';
+                lightboxImage.alt = '';
+                document.body.style.overflow = '';
+                resetZoom();
+            }
+
+            function openLightbox(image) {
+                lightboxImage.src = image.src;
+                lightboxImage.alt = image.alt || '';
+                lightbox.classList.add('is-open');
+                lightbox.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+                resetZoom();
+            }
+
+            lessonImages.forEach((image) => {
+                image.addEventListener('click', () => openLightbox(image));
+            });
+
+            lightboxClose.addEventListener('click', closeLightbox);
+
+            lightbox.addEventListener('click', (event) => {
+                if (event.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            lightbox.addEventListener('wheel', (event) => {
+                if (!lightbox.classList.contains('is-open')) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                const zoomStep = event.deltaY < 0 ? 0.15 : -0.15;
+                currentScale = Math.min(4, Math.max(1, currentScale + zoomStep));
+                applyZoom();
+            }, { passive: false });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+                    closeLightbox();
+                }
+            });
+        }());
+    </script>
+        </main>
+    </div>
+</body>
+</html>

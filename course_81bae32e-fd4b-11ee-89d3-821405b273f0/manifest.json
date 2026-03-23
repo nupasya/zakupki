@@ -1,0 +1,449 @@
+﻿{
+  "course_id": "81bae32e-fd4b-11ee-89d3-821405b273f0",
+  "course_title": "Часть 1. Как, где и что считать?",
+  "output_index": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\index.html",
+  "created_pages": 30,
+  "missing_lessons": 10,
+  "sections": [
+    {
+      "title": "Общая информация",
+      "lessons": [
+        {
+          "title": "Закупки. Твой план адаптации",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s01-01-закупки-твой-план-адаптации.html",
+          "source_title": "Закупки. Твой план адаптации",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s01-01-закупки-твой-план-адаптации.html",
+          "blocks_count": 99,
+          "navigation_count": 3
+        },
+        {
+          "title": "О чём этот курс?",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s01-02-о-ч-м-этот-курс.html",
+          "source_title": "О чём этот курс?",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s01-02-о-ч-м-этот-курс.html",
+          "blocks_count": 37,
+          "navigation_count": 0
+        },
+        {
+          "title": "Глоссарий",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s01-03-глоссарий.html",
+          "source_title": "Глоссарий",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s01-03-глоссарий.html",
+          "blocks_count": 220,
+          "navigation_count": 1
+        }
+      ]
+    },
+    {
+      "title": "Основные инструменты работы",
+      "lessons": [
+        {
+          "title": "Ресурсы для поиска товаров",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-01-ресурсы-для-поиска-товаров.html",
+          "source_title": "Ресурсы для поиска товаров",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s02-01-ресурсы-для-поиска-товаров.html",
+          "blocks_count": 23,
+          "navigation_count": 0
+        },
+        {
+          "title": "Методы поиска товаров",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-02-методы-поиска-товаров.html",
+          "source_title": "Методы поиска товаров",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s02-02-методы-поиска-товаров.html",
+          "blocks_count": 35,
+          "navigation_count": 1
+        },
+        {
+          "title": "Методы определения качества фабрики. Хорошие фабрики",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-03-методы-определения-качества-фабрики-хорошие-фабрики.html",
+          "source_title": "Методы определения качества фабрики. Хорошие фабрики",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s02-03-методы-определения-качества-фабрики-хорошие-фабрики.html",
+          "blocks_count": 42,
+          "navigation_count": 1
+        },
+        {
+          "title": "Методы определения качества фабрики. Плохие фабрики",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-04-методы-определения-качества-фабрики-плохие-фабрики.html",
+          "source_title": "Методы определения качества фабрики. Плохие фабрики",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s02-04-методы-определения-качества-фабрики-плохие-фабрики.html",
+          "blocks_count": 36,
+          "navigation_count": 0
+        },
+        {
+          "title": "Тест по определению качества фабрики",
+          "type": "Онлайн-тест",
+          "status": "В процессе",
+          "available": false,
+          "relative_link": null
+        },
+        {
+          "title": "Лайфхаки по общению с фабриками",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-06-лайфхаки-по-общению-с-фабриками.html",
+          "source_title": "Лайфхаки по общению с фабриками",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s02-06-лайфхаки-по-общению-с-фабриками.html",
+          "blocks_count": 48,
+          "navigation_count": 0
+        },
+        {
+          "title": "Шпаргалка для новичков - диалог с фабрикой",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-07-шпаргалка-для-новичков-диалог-с-фабрикой.html",
+          "source_title": "Шпаргалка для новичков - диалог с фабрикой",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s02-07-шпаргалка-для-новичков-диалог-с-фабрикой.html",
+          "blocks_count": 11,
+          "navigation_count": 1
+        },
+        {
+          "title": "Наш офис в Китае. Кто такой Тони",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-08-наш-офис-в-китае-кто-такой-тони.html",
+          "source_title": "Наш офис в Китае. Кто такой Тони",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s02-08-наш-офис-в-китае-кто-такой-тони.html",
+          "blocks_count": 40,
+          "navigation_count": 1
+        },
+        {
+          "title": "Правила поведения в WeChat",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-09-правила-поведения-в-wechat.html",
+          "source_title": "Правила поведения в WeChat",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s02-09-правила-поведения-в-wechat.html",
+          "blocks_count": 62,
+          "navigation_count": 13
+        },
+        {
+          "title": "Рефлексия",
+          "type": "Задание",
+          "status": "Не начат",
+          "available": false,
+          "relative_link": null
+        }
+      ]
+    },
+    {
+      "title": "Хороший расчет",
+      "lessons": [
+        {
+          "title": "Работа с просчетом в Planfix",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s03-01-работа-с-просчетом-в-planfix.html",
+          "source_title": "Работа с просчетом в Planfix",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s03-01-работа-с-просчетом-в-planfix.html",
+          "blocks_count": 57,
+          "navigation_count": 5
+        },
+        {
+          "title": "Как самостоятельно поставить задачу на просчет",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s03-02-как-самостоятельно-поставить-задачу-на-просчет.html",
+          "source_title": "Как самостоятельно поставить задачу на просчет",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s03-02-как-самостоятельно-поставить-задачу-на-просчет.html",
+          "blocks_count": 15,
+          "navigation_count": 0
+        },
+        {
+          "title": "Навигатор по шапке Planfix",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s03-03-навигатор-по-шапке-planfix.html",
+          "source_title": "Навигатор по шапке Planfix",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s03-03-навигатор-по-шапке-planfix.html",
+          "blocks_count": 39,
+          "navigation_count": 15
+        },
+        {
+          "title": "Mockups. Генератор и галерея мокапов 3.0",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s03-04-mockups-генератор-и-галерея-мокапов-3-0.html",
+          "source_title": "Mockups. Генератор и галерея мокапов 3.0",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s03-04-mockups-генератор-и-галерея-мокапов-3-0.html",
+          "blocks_count": 69,
+          "navigation_count": 7
+        },
+        {
+          "title": "Проработка запроса: удели внимание клиенту!",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s03-05-проработка-запроса-удели-внимание-клиенту.html",
+          "source_title": "Проработка запроса: удели внимание клиенту!",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s03-05-проработка-запроса-удели-внимание-клиенту.html",
+          "blocks_count": 73,
+          "navigation_count": 5
+        },
+        {
+          "title": "Оформление презентации",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": false,
+          "relative_link": null
+        },
+        {
+          "title": "Копилка презентаций",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": false,
+          "relative_link": null
+        },
+        {
+          "title": "Рефлексия",
+          "type": "Задание",
+          "status": "Не начат",
+          "available": false,
+          "relative_link": null
+        }
+      ]
+    },
+    {
+      "title": "Инструкция по работе с калькулятором Headcorn",
+      "lessons": [
+        {
+          "title": "1. Навигация и логика системы Headcorn",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s04-01-1-навигация-и-логика-системы-headcorn.html",
+          "source_title": "1. Навигация и логика системы Headcorn",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s04-01-1-навигация-и-логика-системы-headcorn.html",
+          "blocks_count": 77,
+          "navigation_count": 2
+        },
+        {
+          "title": "2. Проект и позиция: старт расчёта",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": false,
+          "relative_link": null
+        },
+        {
+          "title": "3. Работа с фабриками и AI-парсер",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s04-03-3-работа-с-фабриками-и-ai-парсер.html",
+          "source_title": "3. Работа с фабриками и AI-парсер",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s04-03-3-работа-с-фабриками-и-ai-парсер.html",
+          "blocks_count": 122,
+          "navigation_count": 13
+        },
+        {
+          "title": "4. Логистика, ВЭД и себестоимость",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s04-04-4-логистика-вэд-и-себестоимость.html",
+          "source_title": "4. Логистика, ВЭД и себестоимость",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s04-04-4-логистика-вэд-и-себестоимость.html",
+          "blocks_count": 234,
+          "navigation_count": 18
+        },
+        {
+          "title": "5. Клиентская часть: цены и КП",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s04-05-5-клиентская-часть-цены-и-кп.html",
+          "source_title": "5. Клиентская часть: цены и КП",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s04-05-5-клиентская-часть-цены-и-кп.html",
+          "blocks_count": 180,
+          "navigation_count": 17
+        },
+        {
+          "title": "6. Дополнительные функции проекта и международные просчёты",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s04-06-6-дополнительные-функции-проекта-и-международные-просч-ты.html",
+          "source_title": "6. Дополнительные функции проекта и международные просчёты",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s04-06-6-дополнительные-функции-проекта-и-международные-просч-ты.html",
+          "blocks_count": 30,
+          "navigation_count": 2
+        },
+        {
+          "title": "7. Типовые сценарии работы. Словарь терминов калькулятора Headcorn",
+          "type": "Лонгрид",
+          "status": null,
+          "available": true,
+          "relative_link": "lessons/s04-07-7-типовые-сценарии-работы-словарь-терминов-калькулятора-headcorn.html",
+          "source_title": "7. Типовые сценарии работы. Словарь терминов калькулятора Headcorn",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s04-07-7-типовые-сценарии-работы-словарь-терминов-калькулятора-headcorn.html",
+          "blocks_count": 143,
+          "navigation_count": 9
+        },
+        {
+          "title": "Рефлексия",
+          "type": "Задание",
+          "status": "Не начат",
+          "available": false,
+          "relative_link": null
+        }
+      ]
+    },
+    {
+      "title": "Способы доставки",
+      "lessons": [
+        {
+          "title": "Виды маршрутов. Постоянные категории товаров",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s05-01-виды-маршрутов-постоянные-категории-товаров.html",
+          "source_title": "Виды маршрутов. Постоянные категории товаров",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s05-01-виды-маршрутов-постоянные-категории-товаров.html",
+          "blocks_count": 61,
+          "navigation_count": 11
+        },
+        {
+          "title": "Виды маршрутов. Новая категория товара",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s05-02-виды-маршрутов-новая-категория-товара.html",
+          "source_title": "Виды маршрутов. Новая категория товара",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s05-02-виды-маршрутов-новая-категория-товара.html",
+          "blocks_count": 31,
+          "navigation_count": 4
+        },
+        {
+          "title": "Виды маршрутов. Международная доставка",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s05-03-виды-маршрутов-международная-доставка.html",
+          "source_title": "Виды маршрутов. Международная доставка",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s05-03-виды-маршрутов-международная-доставка.html",
+          "blocks_count": 11,
+          "navigation_count": 0
+        },
+        {
+          "title": "Чек-лист",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s05-04-чек-лист.html",
+          "source_title": "Чек-лист",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s05-04-чек-лист.html",
+          "blocks_count": 23,
+          "navigation_count": 3
+        }
+      ]
+    },
+    {
+      "title": "Сертификаты",
+      "lessons": [
+        {
+          "title": "Сертификация",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s06-01-сертификация.html",
+          "source_title": "Сертификация",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s06-01-сертификация.html",
+          "blocks_count": 133,
+          "navigation_count": 7
+        },
+        {
+          "title": "Понимание сертификации",
+          "type": "Онлайн-тест",
+          "status": "Не начат",
+          "available": false,
+          "relative_link": null
+        }
+      ]
+    },
+    {
+      "title": "Ценообразование",
+      "lessons": [
+        {
+          "title": "Ценообразование, прайсинг, работа с ценой",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s07-01-ценообразование-прайсинг-работа-с-ценой.html",
+          "source_title": "Ценообразование, прайсинг, работа с ценой",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s07-01-ценообразование-прайсинг-работа-с-ценой.html",
+          "blocks_count": 41,
+          "navigation_count": 5
+        },
+        {
+          "title": "Когда повышать, когда снижать цену",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s07-02-когда-повышать-когда-снижать-цену.html",
+          "source_title": "Когда повышать, когда снижать цену",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s07-02-когда-повышать-когда-снижать-цену.html",
+          "blocks_count": 47,
+          "navigation_count": 8
+        },
+        {
+          "title": "Сложные категории товаров",
+          "type": "Лонгрид",
+          "status": null,
+          "available": true,
+          "relative_link": "lessons/s07-03-сложные-категории-товаров.html",
+          "source_title": "Сложные категории товаров",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_81bae32e-fd4b-11ee-89d3-821405b273f0\\lessons\\s07-03-сложные-категории-товаров.html",
+          "blocks_count": 90,
+          "navigation_count": 0
+        },
+        {
+          "title": "Рефлексия",
+          "type": "Задание",
+          "status": "Не начат",
+          "available": false,
+          "relative_link": null
+        }
+      ]
+    },
+    {
+      "title": "KPI",
+      "lessons": [
+        {
+          "title": "Система KPI менеджеров по Китаю",
+          "type": "Лонгрид",
+          "status": "Не начат",
+          "available": false,
+          "relative_link": null
+        }
+      ]
+    }
+  ]
+}

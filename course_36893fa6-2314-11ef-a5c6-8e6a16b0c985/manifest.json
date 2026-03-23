@@ -1,0 +1,214 @@
+﻿{
+  "course_id": "36893fa6-2314-11ef-a5c6-8e6a16b0c985",
+  "course_title": "Часть 2. Заказ и производство",
+  "output_index": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_36893fa6-2314-11ef-a5c6-8e6a16b0c985\\index.html",
+  "created_pages": 13,
+  "missing_lessons": 6,
+  "sections": [
+    {
+      "title": "Задачи",
+      "lessons": [
+        {
+          "title": "Зоны ответственности. Закупки",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s01-01-зоны-ответственности-закупки.html",
+          "source_title": "Зоны ответственности. Закупки",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_36893fa6-2314-11ef-a5c6-8e6a16b0c985\\lessons\\s01-01-зоны-ответственности-закупки.html",
+          "blocks_count": 138,
+          "navigation_count": 0
+        }
+      ]
+    },
+    {
+      "title": "Наш офис в Китае",
+      "lessons": [
+        {
+          "title": "Работа с отделом Тони. Заказ образцов и тиражей",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-01-работа-с-отделом-тони-заказ-образцов-и-тиражей.html",
+          "source_title": "Работа с отделом Тони. Заказ образцов и тиражей",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_36893fa6-2314-11ef-a5c6-8e6a16b0c985\\lessons\\s02-01-работа-с-отделом-тони-заказ-образцов-и-тиражей.html",
+          "blocks_count": 43,
+          "navigation_count": 7
+        },
+        {
+          "title": "Задача на заказ образца Planfix",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-02-задача-на-заказ-образца-planfix.html",
+          "source_title": "Задача на заказ образца Planfix",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_36893fa6-2314-11ef-a5c6-8e6a16b0c985\\lessons\\s02-02-задача-на-заказ-образца-planfix.html",
+          "blocks_count": 93,
+          "navigation_count": 7
+        }
+      ]
+    },
+    {
+      "title": "Заказ - производство",
+      "lessons": [
+        {
+          "title": "Как проходит заказ",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s03-01-как-проходит-заказ.html",
+          "source_title": "Как проходит заказ",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_36893fa6-2314-11ef-a5c6-8e6a16b0c985\\lessons\\s03-01-как-проходит-заказ.html",
+          "blocks_count": 78,
+          "navigation_count": 10
+        },
+        {
+          "title": "Сводка с фабрикой",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s03-02-сводка-с-фабрикой.html",
+          "source_title": "Сводка с фабрикой",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_36893fa6-2314-11ef-a5c6-8e6a16b0c985\\lessons\\s03-02-сводка-с-фабрикой.html",
+          "blocks_count": 50,
+          "navigation_count": 9
+        },
+        {
+          "title": "Запуск производства Planfix",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s03-03-запуск-производства-planfix.html",
+          "source_title": "Запуск производства Planfix",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_36893fa6-2314-11ef-a5c6-8e6a16b0c985\\lessons\\s03-03-запуск-производства-planfix.html",
+          "blocks_count": 67,
+          "navigation_count": 5
+        },
+        {
+          "title": "Инспекция",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s03-04-инспекция.html",
+          "source_title": "Инспекция",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_36893fa6-2314-11ef-a5c6-8e6a16b0c985\\lessons\\s03-04-инспекция.html",
+          "blocks_count": 27,
+          "navigation_count": 0
+        },
+        {
+          "title": "Тест. Инспекция товаров",
+          "type": "Онлайн-тест",
+          "status": "Не начат",
+          "available": false,
+          "relative_link": null
+        },
+        {
+          "title": "Рефлексия",
+          "type": "Задание",
+          "status": "Не начат",
+          "available": false,
+          "relative_link": null
+        }
+      ]
+    },
+    {
+      "title": "Доставка",
+      "lessons": [
+        {
+          "title": "Методы оформления провоза груза",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s04-01-методы-оформления-провоза-груза.html",
+          "source_title": "Методы оформления провоза груза",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_36893fa6-2314-11ef-a5c6-8e6a16b0c985\\lessons\\s04-01-методы-оформления-провоза-груза.html",
+          "blocks_count": 41,
+          "navigation_count": 3
+        },
+        {
+          "title": "Отгрузки. Общая информация",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s04-02-отгрузки-общая-информация.html",
+          "source_title": "Отгрузки. Общая информация",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_36893fa6-2314-11ef-a5c6-8e6a16b0c985\\lessons\\s04-02-отгрузки-общая-информация.html",
+          "blocks_count": 37,
+          "navigation_count": 5
+        },
+        {
+          "title": "Отгрузки. Важно поговорить с клиентом",
+          "type": "Лонгрид",
+          "status": "Не начат",
+          "available": true,
+          "relative_link": "lessons/s04-03-отгрузки-важно-поговорить-с-клиентом.html",
+          "source_title": "Отгрузки. Важно поговорить с клиентом",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_36893fa6-2314-11ef-a5c6-8e6a16b0c985\\lessons\\s04-03-отгрузки-важно-поговорить-с-клиентом.html",
+          "blocks_count": 11,
+          "navigation_count": 0
+        },
+        {
+          "title": "Кейсы. Учимся на чужих ошибках",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": false,
+          "relative_link": null
+        },
+        {
+          "title": "Тест. Задачи менеджеров по процессу отгрузок",
+          "type": "Онлайн-тест",
+          "status": "В процессе",
+          "available": false,
+          "relative_link": null
+        },
+        {
+          "title": "Отгрузка клиенту",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s04-06-отгрузка-клиенту.html",
+          "source_title": "Отгрузка клиенту",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_36893fa6-2314-11ef-a5c6-8e6a16b0c985\\lessons\\s04-06-отгрузка-клиенту.html",
+          "blocks_count": 61,
+          "navigation_count": 1
+        },
+        {
+          "title": "Работа со складом. Что важно помнить",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s04-07-работа-со-складом-что-важно-помнить.html",
+          "source_title": "Работа со складом. Что важно помнить",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_36893fa6-2314-11ef-a5c6-8e6a16b0c985\\lessons\\s04-07-работа-со-складом-что-важно-помнить.html",
+          "blocks_count": 26,
+          "navigation_count": 7
+        },
+        {
+          "title": "Тест. Работа со складом",
+          "type": "Онлайн-тест",
+          "status": "Не начат",
+          "available": false,
+          "relative_link": null
+        },
+        {
+          "title": "Заказ курьера",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s04-09-заказ-курьера.html",
+          "source_title": "Заказ курьера",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_36893fa6-2314-11ef-a5c6-8e6a16b0c985\\lessons\\s04-09-заказ-курьера.html",
+          "blocks_count": 11,
+          "navigation_count": 2
+        },
+        {
+          "title": "Рефлексия",
+          "type": "Задание",
+          "status": "Не начат",
+          "available": false,
+          "relative_link": null
+        }
+      ]
+    }
+  ]
+}

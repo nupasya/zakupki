@@ -1,0 +1,734 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Когда повышать, когда снижать цену</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f5f5;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+            border-bottom: 3px solid #696BEE;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #2a2a2a;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #3a3a3a;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .highlighted {
+            background: #f0f4ff;
+            padding: 16px 20px;
+            border-left: 4px solid #696BEE;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .numbered-item {
+            padding: 12px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .numbered-item:last-child {
+            border-bottom: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: zoom-in;
+        }
+
+        .toc {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .toc li:last-child {
+            border-bottom: none;
+        }
+
+        strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 2px;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #696BEE;
+            border-radius: 2px;
+            width: 100%;
+        }
+
+        .image-lightbox {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+            background: rgba(17, 24, 39, 0.88);
+            z-index: 9999;
+        }
+
+        .image-lightbox.is-open {
+            display: flex;
+        }
+
+        .image-lightbox img {
+            max-width: min(95vw, 1400px);
+            max-height: 88vh;
+            margin: 0;
+            border-radius: 10px;
+            box-shadow: 0 16px 60px rgba(0,0,0,0.45);
+            cursor: default;
+            transform: scale(1);
+            transform-origin: center center;
+            transition: transform 0.08s ease-out;
+        }
+
+        .image-lightbox-close {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 44px;
+            height: 44px;
+            border: none;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.18);
+            color: #fff;
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .image-lightbox-close:hover {
+            background: rgba(255,255,255,0.28);
+        }
+    
+        body {
+            max-width: none;
+            margin: 0;
+            padding: 0;
+            background: #eef2ff;
+        }
+
+        .course-sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 260px;
+            z-index: 100;
+            overflow-y: auto;
+        }
+
+        .course-sidebar-inner {
+            background: #111827;
+            color: #fff;
+            min-height: 100%;
+            padding: 22px 16px 32px;
+            box-shadow: 4px 0 24px rgba(17, 24, 39, 0.18);
+        }
+
+        .lesson-layout {
+            margin-left: 260px;
+            padding: 32px 36px 60px;
+        }
+
+        .lesson-main {
+            max-width: 1060px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1060px;
+            margin: 0 auto;
+            border-radius: 20px;
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+        }
+
+        .course-sidebar-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.62);
+        }
+
+        .course-sidebar-title {
+            margin: 10px 0 18px;
+            font-size: 20px;
+            line-height: 1.25;
+            color: #fff;
+        }
+
+        .course-sidebar-back-link {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 18px;
+            padding: 10px 12px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.10);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .course-sidebar-back-link:hover {
+            background: rgba(255,255,255,0.16);
+        }
+
+        .course-progress-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 18px;
+            padding: 14px;
+            margin-bottom: 18px;
+        }
+
+        .course-progress-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: baseline;
+            font-size: 13px;
+        }
+
+        .course-progress-top strong {
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .course-progress-bar {
+            height: 8px;
+            background: rgba(255,255,255,0.12);
+            border-radius: 999px;
+            overflow: hidden;
+            margin: 12px 0 8px;
+        }
+
+        .course-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #818cf8, #c4b5fd);
+            border-radius: 999px;
+        }
+
+        .course-progress-meta {
+            color: rgba(255,255,255,0.7);
+            font-size: 12px;
+        }
+
+        .course-sidebar-section + .course-sidebar-section {
+            margin-top: 16px;
+        }
+
+        .course-sidebar-section-title {
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .course-sidebar-lessons {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .course-sidebar-lesson {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 14px;
+            text-decoration: none;
+            color: rgba(255,255,255,0.88);
+            background: rgba(255,255,255,0.04);
+            border: 1px solid transparent;
+            font-size: 14px;
+            line-height: 1.35;
+        }
+
+        .course-sidebar-lesson:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.08);
+        }
+
+        .course-sidebar-lesson.is-current {
+            background: rgba(129,140,248,0.24);
+            border-color: rgba(196,181,253,0.55);
+            color: #fff;
+        }
+
+        .course-sidebar-lesson.is-completed .course-sidebar-status {
+            background: #22c55e;
+            color: #052e16;
+        }
+
+        .course-sidebar-lesson.is-locked {
+            color: rgba(255,255,255,0.45);
+            background: rgba(255,255,255,0.03);
+        }
+
+        .course-sidebar-status {
+            flex: 0 0 auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.14);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .course-sidebar-status.locked {
+            background: rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.45);
+        }
+
+        .progress-fill {
+            width: 97%;
+        }
+
+        @media (max-width: 900px) {
+            .course-sidebar {
+                position: static;
+                width: 100%;
+                bottom: auto;
+            }
+
+            .course-sidebar-inner {
+                min-height: auto;
+                padding: 20px 16px;
+            }
+
+            .lesson-layout {
+                margin-left: 0;
+                padding: 20px;
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="lesson-layout">
+<aside class="course-sidebar">
+    <div class="course-sidebar-inner">
+        <div class="course-sidebar-label">Программа курса</div>
+        <h2 class="course-sidebar-title">Часть 1. Как, где и что считать?</h2>
+        <a class="course-sidebar-back-link" href="../index.html">Назад к курсу</a>
+        <div class="course-progress-card">
+            <div class="course-progress-top"><span>Прогресс preview</span><strong>29 из 30</strong></div>
+            <div class="course-progress-bar"><div class="course-progress-fill" style="width: 97%"></div></div>
+            <div class="course-progress-meta">97% пути по собранным урокам</div>
+        </div>
+        <div class="course-sidebar-sections">
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Общая информация</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson is-completed" href="s01-01-закупки-твой-план-адаптации.html"><span class="course-sidebar-status">1</span><span>Закупки. Твой план адаптации</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s01-02-о-ч-м-этот-курс.html"><span class="course-sidebar-status">2</span><span>О чём этот курс?</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s01-03-глоссарий.html"><span class="course-sidebar-status">3</span><span>Глоссарий</span></a>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Основные инструменты работы</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson is-completed" href="s02-01-ресурсы-для-поиска-товаров.html"><span class="course-sidebar-status">4</span><span>Ресурсы для поиска товаров</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s02-02-методы-поиска-товаров.html"><span class="course-sidebar-status">5</span><span>Методы поиска товаров</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s02-03-методы-определения-качества-фабрики-хорошие-фабрики.html"><span class="course-sidebar-status">6</span><span>Методы определения качества фабрики. Хорошие фабрики</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s02-04-методы-определения-качества-фабрики-плохие-фабрики.html"><span class="course-sidebar-status">7</span><span>Методы определения качества фабрики. Плохие фабрики</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Тест по определению качества фабрики <em>(Онлайн-тест)</em></span></div>
+                    <a class="course-sidebar-lesson is-completed" href="s02-06-лайфхаки-по-общению-с-фабриками.html"><span class="course-sidebar-status">8</span><span>Лайфхаки по общению с фабриками</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s02-07-шпаргалка-для-новичков-диалог-с-фабрикой.html"><span class="course-sidebar-status">9</span><span>Шпаргалка для новичков - диалог с фабрикой</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s02-08-наш-офис-в-китае-кто-такой-тони.html"><span class="course-sidebar-status">10</span><span>Наш офис в Китае. Кто такой Тони</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s02-09-правила-поведения-в-wechat.html"><span class="course-sidebar-status">11</span><span>Правила поведения в WeChat</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Рефлексия <em>(Задание)</em></span></div>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Хороший расчет</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson is-completed" href="s03-01-работа-с-просчетом-в-planfix.html"><span class="course-sidebar-status">12</span><span>Работа с просчетом в Planfix</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s03-02-как-самостоятельно-поставить-задачу-на-просчет.html"><span class="course-sidebar-status">13</span><span>Как самостоятельно поставить задачу на просчет</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s03-03-навигатор-по-шапке-planfix.html"><span class="course-sidebar-status">14</span><span>Навигатор по шапке Planfix</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s03-04-mockups-генератор-и-галерея-мокапов-3-0.html"><span class="course-sidebar-status">15</span><span>Mockups. Генератор и галерея мокапов 3.0</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s03-05-проработка-запроса-удели-внимание-клиенту.html"><span class="course-sidebar-status">16</span><span>Проработка запроса: удели внимание клиенту!</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Оформление презентации <em>(Лонгрид)</em></span></div>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Копилка презентаций <em>(Лонгрид)</em></span></div>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Рефлексия <em>(Задание)</em></span></div>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Инструкция по работе с калькулятором Headcorn</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson is-completed" href="s04-01-1-навигация-и-логика-системы-headcorn.html"><span class="course-sidebar-status">17</span><span>1. Навигация и логика системы Headcorn</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>2. Проект и позиция: старт расчёта <em>(Лонгрид)</em></span></div>
+                    <a class="course-sidebar-lesson is-completed" href="s04-03-3-работа-с-фабриками-и-ai-парсер.html"><span class="course-sidebar-status">18</span><span>3. Работа с фабриками и AI-парсер</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s04-04-4-логистика-вэд-и-себестоимость.html"><span class="course-sidebar-status">19</span><span>4. Логистика, ВЭД и себестоимость</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s04-05-5-клиентская-часть-цены-и-кп.html"><span class="course-sidebar-status">20</span><span>5. Клиентская часть: цены и КП</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s04-06-6-дополнительные-функции-проекта-и-международные-просч-ты.html"><span class="course-sidebar-status">21</span><span>6. Дополнительные функции проекта и международные просчёты</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s04-07-7-типовые-сценарии-работы-словарь-терминов-калькулятора-headcorn.html"><span class="course-sidebar-status">22</span><span>7. Типовые сценарии работы. Словарь терминов калькулятора Headcorn</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Рефлексия <em>(Задание)</em></span></div>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Способы доставки</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson is-completed" href="s05-01-виды-маршрутов-постоянные-категории-товаров.html"><span class="course-sidebar-status">23</span><span>Виды маршрутов. Постоянные категории товаров</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s05-02-виды-маршрутов-новая-категория-товара.html"><span class="course-sidebar-status">24</span><span>Виды маршрутов. Новая категория товара</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s05-03-виды-маршрутов-международная-доставка.html"><span class="course-sidebar-status">25</span><span>Виды маршрутов. Международная доставка</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s05-04-чек-лист.html"><span class="course-sidebar-status">26</span><span>Чек-лист</span></a>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Сертификаты</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson is-completed" href="s06-01-сертификация.html"><span class="course-sidebar-status">27</span><span>Сертификация</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Понимание сертификации <em>(Онлайн-тест)</em></span></div>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Ценообразование</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson is-completed" href="s07-01-ценообразование-прайсинг-работа-с-ценой.html"><span class="course-sidebar-status">28</span><span>Ценообразование, прайсинг, работа с ценой</span></a>
+                    <a class="course-sidebar-lesson is-current" href="s07-02-когда-повышать-когда-снижать-цену.html"><span class="course-sidebar-status">29</span><span>Когда повышать, когда снижать цену</span></a>
+                    <a class="course-sidebar-lesson" href="s07-03-сложные-категории-товаров.html"><span class="course-sidebar-status">30</span><span>Сложные категории товаров</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Рефлексия <em>(Задание)</em></span></div>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">KPI</div>
+                <div class="course-sidebar-lessons">
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Система KPI менеджеров по Китаю <em>(Лонгрид)</em></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+        <main class="lesson-main">
+    <div class="container">
+        <h1>Когда повышать, когда снижать цену</h1>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="toc">
+            <h3>Содержание:</h3>
+            <ul>
+                <li>• Общий алгоритм: всегда повышаем цену, когда знаем, что это уместно и не повлияет на решение клиента в негативном ключе</li>
+                <li>• Когда цену надо давать выше</li>
+                <li>• Когда цену надо давать ниже:</li>
+                <li>• Общий алгоритм: как можно реже и только если это или запланировано или реально влияет на решение клиента</li>
+                <li>• Если минимум 2 пункта актуальны, то цену наверняка надо делать ниже. Если только 1 пункт совпадает, то это еще не повод снижаться.</li>
+                <li>• Как мы торгуемся:</li>
+                <li>• Что можно “менять” при торге можно посмотреть исходя из факторов которые влияют на цену:</li>
+                <li>• Когда можно не работать глубоко с ценой</li>
+            </ul>
+        </div>
+
+        <h3>Общий алгоритм: всегда повышаем цену, когда знаем, что это уместно и не повлияет на решение клиента в негативном ключе</h3>
+
+        <div class="numbered-item">
+            <p><strong>Когда товар сложный и эксклюзивный</strong> . <em>Пример: лего, который собирается по макету клиента</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><strong>Когда товар рискованный</strong> (большой шанс что выйдет фигня или часть груза побьется в пути и нужно будет потратиться на упаковку). <em>Пример: гипсовый аромадиффузор, который легко откалывается</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><strong>Когда наш товар сильно ниже рынка РФ</strong> . <em>Пример: по анализу в РФ оптовая цена не ниже 200р, а у нас 80р</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><strong>Когда у клиента нет альтернатив.</strong> <em>Пример: клиент хочет 200 штук какого-то товара, которых нет в РФ и ему нужно срочно стюардессой их отправить. Или клиент хочет отправить товар напрямую из Китая не в Россию</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><strong>Когда клиент прямой, а раньше работал с агентствами</strong> . <em>Пример: у клиента всегда были агентские завышенные цены и он готов покупать продукцию с небольшой скидкой от агентских цен</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><strong>Когда тираж маленький.</strong> <em>Пример: клиент хочет 20 дорогих гаджетов</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><strong>Когда у клиента тактика “всегда торгуюсь”.</strong> <em>Пример: вам прилетает сообщение “ой дорого, нужно дешевле” после каждой отправленной цены</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><strong>Когда клиент проблемный и часто просит уступки после запуска.</strong> <em>Пример: клиент зацепился за какое-то условие, которое было где-то в сообщениях когда-то и не было акцента при запуске заказа (например что на товар нужно более мелкое дробление в коробках) и это не разовый кейс, а регулярно</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><strong>Когда мы знаем таргет клиента и он сильно выше базовой цены.</strong> <em>Пример: таргет у клиента 3000р за рюкзак, у нас вышло 2000р, значит нужно дотягивать до таргета клиента, но не в притык, но предварительно проанализировать возможно что-то не учли по ТЗ</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><strong>Разбивка по тиражам</strong> <em>Пример: в запросе клиент просит тираж от 100/500/1000/2000/10000 штук, на маленькие тиражи лучше дать цену повыше, чтобы увеличить разницу в цене между тиражами</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><strong>Мы не уверены в весе</strong> <em>Пример: продукция изготавливается по макетам клиента и вес точный не возможно посчитать на этом этапе без образца. Тогда можно дать расчет с весом выше и предупредить о перерасчете после образца</em></p>
+        </div>
+
+        <p><strong>Пример:</strong> Клиент отправляет запрос на 50 мышек, которых нет в России и просит привезти их как можно быстрее. Тут две причины почему нужно цену давать выше: первая: нет альтернатив, вторая: тираж маленький</p>
+
+        <p>Если у вас есть несколько пунктов из них, то цену наверняка надо делать выше.</p>
+
+        <h3>Общий алгоритм: как можно реже и только если это или запланировано или реально влияет на решение клиента</h3>
+
+        <div class="numbered-item">
+            <p>Когда тираж большой. <em>Пример: пришел запрос с тиражом на 20 000 флешек. Потенциально чек выше 5 млн</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p>Когда наш товар выше рынка РФ. <em>Пример: у нас в расчете 500р. В каталоге со скидкой 300р</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p>Когда товар очень обычный и популярный <em>Пример: запрос на 300 пауеров Xiaomi</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p>Когда заведомо категория товара с низкой маржинальностью (одежда, фарфор, шопперы) <em>Пример: запрос на 1000 футболок</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><em>Когда мы знаем таргет клиента и он ниже базовой цены. Пример: таргет у клиента 2000р за рюкзак, у нас вышло 3000р, значит нужно дотягивать до таргета клиента, но не в притык, но предварительно проанализировать возможно что-то не учли по ТЗ</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p>Во время торга с клиентом (СМ. пункт как мы торгуемся)</p>
+        </div>
+
+        <div class="numbered-item">
+            <p>Клиент потенциально крутой</p>
+        </div>
+
+        <h3>Если минимум 2 пункта актуальны, то цену наверняка надо делать ниже. Если только 1 пункт совпадает, то это еще не повод снижаться.</h3>
+
+        <p><strong>Пример:</strong> Клиент приходит с запросом на 30 000 пауеров и просит цену 500р (таргет реалистичный и близок к рынку РФ). При сыром расчете вышла цена 700р, в этом случае мы снижаем цену чтобы приблизится к таргету клиента, т.к. его таргет ниже нашей цены и тираж большой.</p>
+
+        <p><strong>Главное правило - мы не даем цену ниже просто так по просьбе клиента.</strong></p>
+
+        <p><strong>ВСЕГДА должно быть или обмен или объяснение.</strong></p>
+
+        <h3>Что можно “менять” при торге можно посмотреть исходя из факторов которые влияют на цену:</h3>
+
+        <div class="numbered-item">
+            <p><strong>Сроки поставки</strong> <em>Пример: можем ли мы увеличить сроки доставки, чтобы улучшить цену за счет оптимизации доставки?</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><strong>Способ оплаты</strong> <em>Пример: есть ли возможность оплатить заказ без НДС? Тогда мы сможем вам сделать скидку</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><strong>Размер предоплаты</strong> <em>Пример: Можете ли вы по этому заказу внести больше предоплату? Тогда мы сможем дать чуть ниже цену за счет фиксации в $</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><strong>Надежность фабрики</strong> <em>Пример: мы нашли фабрику, которая сделает дешевле, но фабрика, у которой мы считали вначале внушает больше доверия, т.к. она большая/лучше коммуницирует/делает известным брендам/делала уже такой вид продукции</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><strong>Тираж</strong> <em>Пример: есть ли возможность увеличить тира вместо 800 штук заказать 1000? Мы тогда сможем немного снизить цену</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><strong>Суммарный заказ</strong> <em>Пример: есть ли возможность вместе с пауер банками сразу заказать ежедневники, которые считаем тоже для вас, тогда мы сможем за счет общего заказа немного оптимизировать цену</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><strong>Удешевить упаковку</strong> <em>Пример: мы посчитали вместо коробок, пакетики и можем дать цену ниже за счет этого</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><strong>Признать “ошибку”</strong> <em>Пример: мы проверили расчет, фабрика дала нам неверные данные, из-за этого цена доставки “поплыла”, если взять корректный вес, то сможем дать вот такую цену</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><strong>Предтиражные образцы</strong> <em>Пример: стоимость кастомных образцов попросили включить в счет за тираж, можем сохранить нашу цену, но не учитывать образцы в счете на партию.</em></p>
+        </div>
+
+        <div class="numbered-item">
+            <p><strong>Поменять доставку</strong></p>
+        </div>
+
+        <p>Методы могут быть и другими, выбор методов зависит от ситуации, если мы знаем что сроки у клиента строгие к событию, то не нужно предлагать их увеличить, наоборот это повод предложить перестраховаться и выбрать более дорогую доставку.</p>
+
+        <div class="numbered-item">
+            <p>Предложить альтернативу</p>
+        </div>
+
+        <p><strong>В общем случае лучше давать цену вначале выше, а потом использовать метод для торга, т.к. повышение цены рассматривается всегда более негативно, чем понижение</strong></p>
+
+        <p>В исключительных случаях мы не работаем глубоко с ценой и можем оставить базовые цены или близкие к ней:</p>
+
+        <div class="numbered-item">
+            <p>Предварительная быстрая цена для ориентира (но в этом случае клиенту лучше давать с наценкой 1,9-2,0)</p>
+        </div>
+
+        <div class="numbered-item">
+            <p>Цены в тендере с кучей позиций и кучей тиражей</p>
+        </div>
+
+        <div class="numbered-item">
+            <p>Когда вас жарят по срокам</p>
+        </div>
+
+        <p>Во всех ситуациях надо “подстелить” основу для торга, напиши что в данной ситуации цена не итоговая и была посчитана не детально.Итоговую цену дает тот кто общается с клиентом, но ответственный за расчет помогает в формировании цены.</p>
+
+        <p><strong>Важно понимать, что как завышенная цена при желании заработать больше, может привести к отказу от заказа, так и чрезмерное уменьшение цены приводит к сокращению дохода.</strong></p>
+
+        <p>База знаний и инструкций: Материалы для этого урока взяты из инструкции: ; ;</p>
+
+        <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+            <button type="button" class="image-lightbox-close" id="imageLightboxClose" aria-label="Закрыть просмотр">×</button>
+            <img id="imageLightboxContent" src="" alt="">
+        </div>
+    </div>
+    <script>
+        (function () {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImage = document.getElementById('imageLightboxContent');
+            const lightboxClose = document.getElementById('imageLightboxClose');
+            const lessonImages = document.querySelectorAll('.container img:not(#imageLightboxContent)');
+            let currentScale = 1;
+
+            function applyZoom() {
+                lightboxImage.style.transform = `scale(${currentScale})`;
+            }
+
+            function resetZoom() {
+                currentScale = 1;
+                applyZoom();
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('is-open');
+                lightbox.setAttribute('aria-hidden', 'true');
+                lightboxImage.src = '';
+                lightboxImage.alt = '';
+                document.body.style.overflow = '';
+                resetZoom();
+            }
+
+            function openLightbox(image) {
+                lightboxImage.src = image.src;
+                lightboxImage.alt = image.alt || '';
+                lightbox.classList.add('is-open');
+                lightbox.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+                resetZoom();
+            }
+
+            lessonImages.forEach((image) => {
+                image.addEventListener('click', () => openLightbox(image));
+            });
+
+            lightboxClose.addEventListener('click', closeLightbox);
+
+            lightbox.addEventListener('click', (event) => {
+                if (event.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            lightbox.addEventListener('wheel', (event) => {
+                if (!lightbox.classList.contains('is-open')) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                const zoomStep = event.deltaY < 0 ? 0.15 : -0.15;
+                currentScale = Math.min(4, Math.max(1, currentScale + zoomStep));
+                applyZoom();
+            }, { passive: false });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+                    closeLightbox();
+                }
+            });
+        }());
+    </script>
+        </main>
+    </div>
+</body>
+</html>

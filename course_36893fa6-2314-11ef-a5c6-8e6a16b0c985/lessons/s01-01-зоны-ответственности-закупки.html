@@ -1,0 +1,872 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зоны ответственности. Закупки</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f5f5;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+            border-bottom: 3px solid #696BEE;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #2a2a2a;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #3a3a3a;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .highlighted {
+            background: #f0f4ff;
+            padding: 16px 20px;
+            border-left: 4px solid #696BEE;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .numbered-item {
+            padding: 12px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .numbered-item:last-child {
+            border-bottom: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: zoom-in;
+        }
+
+        .toc {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .toc li:last-child {
+            border-bottom: none;
+        }
+
+        strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 2px;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #696BEE;
+            border-radius: 2px;
+            width: 100%;
+        }
+
+        .image-lightbox {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+            background: rgba(17, 24, 39, 0.88);
+            z-index: 9999;
+        }
+
+        .image-lightbox.is-open {
+            display: flex;
+        }
+
+        .image-lightbox img {
+            max-width: min(95vw, 1400px);
+            max-height: 88vh;
+            margin: 0;
+            border-radius: 10px;
+            box-shadow: 0 16px 60px rgba(0,0,0,0.45);
+            cursor: default;
+            transform: scale(1);
+            transform-origin: center center;
+            transition: transform 0.08s ease-out;
+        }
+
+        .image-lightbox-close {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 44px;
+            height: 44px;
+            border: none;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.18);
+            color: #fff;
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .image-lightbox-close:hover {
+            background: rgba(255,255,255,0.28);
+        }
+    
+        .lesson-return {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e7eb;
+            text-align: center;
+        }
+
+        .lesson-return-button {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 14px;
+            background: #eef2ff;
+            color: #3730a3;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.15s;
+        }
+
+        .lesson-return-button:hover {
+            background: #e0e7ff;
+        }
+
+    
+        body {
+            max-width: none;
+            margin: 0;
+            padding: 0;
+            background: #eef2ff;
+        }
+
+        /* Sidebar фиксируется слева, контент занимает всю оставшуюся ширину */
+        .course-sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 260px;
+            z-index: 100;
+            overflow-y: auto;
+        }
+
+        .course-sidebar-inner {
+            background: #111827;
+            color: #fff;
+            min-height: 100%;
+            padding: 22px 16px 32px;
+            box-shadow: 4px 0 24px rgba(17, 24, 39, 0.18);
+        }
+
+        .lesson-layout {
+            margin-left: 260px;
+            padding: 32px 36px 60px;
+        }
+
+        .lesson-main {
+            max-width: 1060px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1060px;
+            margin: 0 auto;
+            border-radius: 20px;
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+        }
+
+        .course-sidebar-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.62);
+        }
+
+        .course-sidebar-title {
+            margin: 10px 0 18px;
+            font-size: 20px;
+            line-height: 1.25;
+            color: #fff;
+        }
+
+        .course-progress-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 18px;
+            padding: 14px;
+            margin-bottom: 18px;
+        }
+
+        .course-progress-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: baseline;
+            font-size: 13px;
+        }
+
+        .course-progress-top strong {
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .course-progress-bar {
+            height: 8px;
+            background: rgba(255,255,255,0.12);
+            border-radius: 999px;
+            overflow: hidden;
+            margin: 12px 0 8px;
+        }
+
+        .course-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #818cf8, #c4b5fd);
+            border-radius: 999px;
+        }
+
+        .course-progress-meta {
+            color: rgba(255,255,255,0.7);
+            font-size: 12px;
+        }
+
+        .course-sidebar-section + .course-sidebar-section {
+            margin-top: 16px;
+        }
+
+        .course-sidebar-section-title {
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .course-sidebar-lessons {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .course-sidebar-lesson {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 14px;
+            text-decoration: none;
+            color: rgba(255,255,255,0.88);
+            background: rgba(255,255,255,0.04);
+            border: 1px solid transparent;
+            font-size: 14px;
+            line-height: 1.35;
+        }
+
+        .course-sidebar-lesson:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.08);
+        }
+
+        .course-sidebar-lesson.is-current {
+            background: rgba(129,140,248,0.24);
+            border-color: rgba(196,181,253,0.55);
+            color: #fff;
+        }
+
+        .course-sidebar-lesson.is-completed .course-sidebar-status {
+            background: #22c55e;
+            color: #052e16;
+        }
+
+        .course-sidebar-lesson.is-locked {
+            color: rgba(255,255,255,0.45);
+            background: rgba(255,255,255,0.03);
+        }
+
+        .course-sidebar-status {
+            flex: 0 0 auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.14);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .course-sidebar-status.locked {
+            background: rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.45);
+        }
+
+        .progress-fill {
+            width: 8%;
+        }
+
+        @media (max-width: 900px) {
+            .course-sidebar {
+                position: static;
+                width: 100%;
+                bottom: auto;
+            }
+
+            .course-sidebar-inner {
+                min-height: auto;
+                padding: 20px 16px;
+            }
+
+            .lesson-layout {
+                margin-left: 0;
+                padding: 20px;
+            }
+        }
+    
+            .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .lesson-header h1 {
+            flex: 1 1 auto;
+            margin-bottom: 0;
+        }
+
+        .lesson-return-top {
+            flex: 0 0 auto;
+        }
+
+        .lesson-return-bottom {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e7eb;
+            text-align: left;
+        }
+
+        .lesson-return-button {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 14px;
+            background: #eef2ff;
+            color: #3730a3;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.15s;
+            white-space: nowrap;
+        }
+
+        .lesson-return-button:hover {
+            background: #e0e7ff;
+        }
+
+        @media (max-width: 700px) {
+            .lesson-header {
+                flex-direction: column;
+            }
+
+            .lesson-return-top {
+                width: 100%;
+            }
+        }
+    
+        .course-sidebar-back-link {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 18px;
+            padding: 10px 12px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.10);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .course-sidebar-back-link:hover {
+            background: rgba(255,255,255,0.16);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="lesson-layout">
+<aside class="course-sidebar">
+    <div class="course-sidebar-inner">
+        <div class="course-sidebar-label">Программа курса</div>
+        <h2 class="course-sidebar-title">Часть 2. Заказ и производство</h2>
+        <div class="course-progress-card">
+            <div class="course-progress-top"><span>Прогресс preview</span><strong>1 из 13</strong></div>
+            <div class="course-progress-bar"><div class="course-progress-fill" style="width: 8%"></div></div>
+            <div class="course-progress-meta">8% пути по собранным урокам</div>
+        </div>
+        <div class="course-sidebar-sections">
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Задачи</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson is-current" href="s01-01-зоны-ответственности-закупки.html"><span class="course-sidebar-status">1</span><span>Зоны ответственности. Закупки</span></a>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Наш офис в Китае</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson" href="s02-01-работа-с-отделом-тони-заказ-образцов-и-тиражей.html"><span class="course-sidebar-status">2</span><span>Работа с отделом Тони. Заказ образцов и тиражей</span></a>
+                    <a class="course-sidebar-lesson" href="s02-02-задача-на-заказ-образца-planfix.html"><span class="course-sidebar-status">3</span><span>Задача на заказ образца Planfix</span></a>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Заказ - производство</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson" href="s03-01-как-проходит-заказ.html"><span class="course-sidebar-status">4</span><span>Как проходит заказ</span></a>
+                    <a class="course-sidebar-lesson" href="s03-02-сводка-с-фабрикой.html"><span class="course-sidebar-status">5</span><span>Сводка с фабрикой</span></a>
+                    <a class="course-sidebar-lesson" href="s03-03-запуск-производства-planfix.html"><span class="course-sidebar-status">6</span><span>Запуск производства Planfix</span></a>
+                    <a class="course-sidebar-lesson" href="s03-04-инспекция.html"><span class="course-sidebar-status">7</span><span>Инспекция</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Тест. Инспекция товаров <em>(Онлайн-тест)</em></span></div>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Рефлексия <em>(Задание)</em></span></div>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Доставка</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson" href="s04-01-методы-оформления-провоза-груза.html"><span class="course-sidebar-status">8</span><span>Методы оформления провоза груза</span></a>
+                    <a class="course-sidebar-lesson" href="s04-02-отгрузки-общая-информация.html"><span class="course-sidebar-status">9</span><span>Отгрузки. Общая информация</span></a>
+                    <a class="course-sidebar-lesson" href="s04-03-отгрузки-важно-поговорить-с-клиентом.html"><span class="course-sidebar-status">10</span><span>Отгрузки. Важно поговорить с клиентом</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Кейсы. Учимся на чужих ошибках <em>(Лонгрид)</em></span></div>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Тест. Задачи менеджеров по процессу отгрузок <em>(Онлайн-тест)</em></span></div>
+                    <a class="course-sidebar-lesson" href="s04-06-отгрузка-клиенту.html"><span class="course-sidebar-status">11</span><span>Отгрузка клиенту</span></a>
+                    <a class="course-sidebar-lesson" href="s04-07-работа-со-складом-что-важно-помнить.html"><span class="course-sidebar-status">12</span><span>Работа со складом. Что важно помнить</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Тест. Работа со складом <em>(Онлайн-тест)</em></span></div>
+                    <a class="course-sidebar-lesson" href="s04-09-заказ-курьера.html"><span class="course-sidebar-status">13</span><span>Заказ курьера</span></a>
+                    <div class="course-sidebar-lesson is-locked"><span class="course-sidebar-status locked">-</span><span>Рефлексия <em>(Задание)</em></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+        <main class="lesson-main">
+    <div class="container">
+        <h1>Зоны ответственности. Закупки</h1>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <p>Расчет</p>
+
+        <p>Расчет</p>
+
+        <p>Примеры и уточнения</p>
+
+        <p>Поиск новинок рынка, демонстрация коллегам, продвижение своих товарных предложений</p>
+
+        <p>Каталоги интересных фабрик, интересные товары</p>
+
+        <p>Сбор подборок товаров по запросу</p>
+
+        <p>Пришел запрос "нужны новинки пауэрбанков"</p>
+
+        <p>Просчет товара на фабрике</p>
+
+        <p>Предложение аналогов запрошенного товара</p>
+
+        <p>Клиент запросил определенную колонку. Во время поиска нашлась новая улучшенная версия этой колонки.</p>
+
+        <p>Внесение данных в таблицу расчетов</p>
+
+        <p>Ведение задачи в Планфиксе, отслеживание и фиксация данных по запросу</p>
+
+        <p>Ссылки, фотографии, каталоги, договоренности</p>
+
+        <p>Анализ себестоимости товара</p>
+
+        <p>Выбор фабрик с лучшими условиями</p>
+
+        <p>Запрос каталогов у фабрик</p>
+
+        <p>Анализ предложений от нескольких фабрик и выбор лучших предложений для дальнейшей работы</p>
+
+        <p>Расчет стоимости доставки</p>
+
+        <p>Расчет стоимости доставки по России</p>
+
+        <p>Если такое требование Было в ТЗ от клиента изначальноСДЭК, Деловые Линии</p>
+
+        <p>Заполнение КП по шаблону презентации/таблицы</p>
+
+        <p>Предоставление дополнительных фото и видео для клиента</p>
+
+        <p>Предоставление ссылок или фотографий по просьбе менеджера по продажам</p>
+
+        <p>Поиск ответов на дополнительные вопросы клиента по товару</p>
+
+        <p>Клиент хочет заказать фарфор и спрашивает, можно ли его мыть в посудомоечной машине.</p>
+
+        <p>Проверка образца на соответствие ТЗ</p>
+
+        <p>Клиент выбрал синий цвет из раскладки тканей фабрики для пошива сумки. Фабрика сделала образец, отправила фото, образец поехал клиенту. Клиент обнаружил, что на сумке использован не тот синий, который он выбрал.</p>
+
+        <p>Заполнение баллов KPI закупок</p>
+
+        <p>Заказ - Производство</p>
+
+        <p>Примеры и уточнения</p>
+
+        <p>Создание заказа в Мой Склад</p>
+
+        <p>Составление сводки для фабрики</p>
+
+        <p>Отслеживание наличия технического макета</p>
+
+        <p>Мы должны получить от фабрики макет, который сможем передать клиенту.Мы должны получить от клиента макет, который будет соответствовать требованиям фабрики, и согласовать его с поставщиком.</p>
+
+        <p>Контроль наличия всех материалов для запуска производства</p>
+
+        <p>Макеты, пантоны, визуалы</p>
+
+        <p>Организация чата с фабрикой и китайским отделом Тони для заказа</p>
+
+        <p>Созвоны с менеджером фабрики для подтверждения голосом ключевых моментов производства</p>
+
+        <p>Контроль процесса производства на фабрике</p>
+
+        <p>Ведение производственного плана в планфиксе и фиксация всех чек-поинтов</p>
+
+        <p>Предложение путей решения проблем, обнаруженных в процессе производства или инспекции</p>
+
+        <p>Несоответствие товара ТЗ, плохое качество</p>
+
+        <p>Запрос фотографий процесса производства заказа и промежуточных результатов</p>
+
+        <p>Решение о проведении инспекции на фабрике</p>
+
+        <p>Составление сводки для инспекции</p>
+
+        <p>Прием инспекции и оценка качества и соответствия товара ТЗ</p>
+
+        <p>Проверка товара на соответствие ТЗ, информирование менеджера по продажам</p>
+
+        <p>Доставка - Отгрузка</p>
+
+        <p>Примеры и уточнения</p>
+
+        <p>Контроль персональной и транспортной упаковки товара</p>
+
+        <p>Если с клиентом не оговорен определенный способ упаковки</p>
+
+        <p>Контроль процесса доставки и действий ВЭД менеджера</p>
+
+        <p>Своевременная проверка документов, маркировка, сертификаты и т.п.</p>
+
+        <p>Контроль состояния груза при получении в Москве, инициатива решения проблем с грузом</p>
+
+        <p>Мятые коробки, мятый товар, необходима переборка и т.п.</p>
+
+        <p>Заполнение таблицы отгрузок для Саши</p>
+
+        <p>Совместная ответственность менеджера по продажам и менеджера по закупкам</p>
+
+        <p>Закрытие проекта</p>
+
+        <p>Примеры и уточнения</p>
+
+        <p>Подсчет расходов и закрытие проекта</p>
+
+        <p>Решение проблем с фабрикой, связанных с качеством и соответствием ТЗ продукции, после отгрузки клиенту</p>
+
+        <p>Клиент говорит, что вместо синих ручек приехали зеленые. Совместная ответственность менеджера по продажам и менеджера по закупкам. Продажи решают вопрос с клиентом, закупки - с фабрикой, ведется параллельная работа с обеих сторон для урегулирования ситуации.</p>
+
+        <p>Заполнение формы и описание проектов для ежемесячной рубрики «Проекты, которые мы закрыли в прошлом месяце»</p>
+
+        <p>Совместная ответственность менеджера по продажам и менеджера по закупкам</p>
+
+        <p>Также предлагаю ознакомиться с границами ответственности твоих коллег из отдела по работе с Китаем, так ты лучше поймешь, как выглядит работа с той стороны.</p>
+
+        <p><strong>Границы ответственности отдела Продаж:</strong></p>
+
+        <p><strong>Клиенты - Расчет</strong></p>
+
+        <p><strong>Клиенты - Расчет</strong></p>
+
+        <p><strong>Примеры и уточнения</strong></p>
+
+        <p>Работа с лидами</p>
+
+        <p>Клиент зашел на наш сайт и отправил запрос на расчет</p>
+
+        <p>Составление речевых модулей для работы с клиентами</p>
+
+        <p>Для того, чтобы закрыть возражения или продать, составляются речевые формулировки, которые потом оттачиваются в ролевках и в дальнейшем применяются в разговоре с клиентом</p>
+
+        <p>Проведение встреч с клиентом</p>
+
+        <p>Проведение созвонов с клиентом</p>
+
+        <p>Ведение карточки клиента</p>
+
+        <p>Фиксация всей информации, связанной с клиентом и его деятельностью</p>
+
+        <p>Брифинг клиента и выявление потребностей</p>
+
+        <p>Изучение портрета клиента и выстраивание стратегии коммуникации</p>
+
+        <p>Чем компания занимается, что можно предложить, сколько сотрудников, с кем работают, т.п.</p>
+
+        <p>Создание контента для клиента</p>
+
+        <p>Фото и видео живых образцов из офиса</p>
+
+        <p>Помощь клиенту с подбором позиций / идей</p>
+
+        <p>Клиент не знает, что он хочет</p>
+
+        <p>Продажа наших идей и товаров, самостоятельная инициация запроса</p>
+
+        <p>Клиент - фармацевтическая компания. Мы узнали, что на рынке появилась новая супер таблетница и подготовили предложение еще до запроса, чтобы заинтересовать клиента.</p>
+
+        <p>Постановка задач на просчет в планфиксе</p>
+
+        <p>Установка крайних сроков расчета</p>
+
+        <p>Менеджер по продажам оговаривает срок расчета с клиентом и отдает запрос тому менеджеру, который сможет предоставить расчет к оговоренному времени</p>
+
+        <p>Предоставление визуала для клиента</p>
+
+        <p>Клиент хочет увидеть, как его логотип будет смотреться на таблетнице.</p>
+
+        <p>Подготовка итогового КП для клиента</p>
+
+        <p>Анализ итоговой цены для клиента</p>
+
+        <p>Передача КП клиенту, защита и отработка возражений</p>
+
+        <p>Клиент говорит, что у нас очень дорого</p>
+
+        <p>Запрос обратной связи и отработка возражений</p>
+
+        <p>Клиент получил заказ, но расстроен, что красный цвет недостаточно красный, "на фото блокнот был краснее!"</p>
+
+        <p>Налаживание связь и реабилитиация клиентов, которые перестали присылать нам запросы</p>
+
+        <p>Принятие решения о необходимости заказа образца</p>
+
+        <p>Принятие решения об отправке заказанного образца с фабрики</p>
+
+        <p>Фабрика сделала образец рюкзака по ТЗ клиента, но поставила молнию кверх ногами. Новый образец делать еще неделю, предлагают отправить как есть и поправить на тираже.</p>
+
+        <p>Организация доставки образцов клиенту</p>
+
+        <p>Нужно вызвать курьера, чтобы отправить клиенту образец.</p>
+
+        <p>Ведение план-факт отчета по продажам</p>
+
+        <p><strong>Заказ - Производство</strong></p>
+
+        <p><strong>Примеры и уточнения</strong></p>
+
+        <p>Составление договора с клиентом</p>
+
+        <p>Составление приложения к договору</p>
+
+        <p>Составление сводки для клиента</p>
+
+        <p>Ведение сделки в Планфиксе</p>
+
+        <p>Фиксация всей информации, связанной с обратной связью от клиента, в Планфиксе</p>
+
+        <p>Выставление счета клиенту</p>
+
+        <p>Контроль поступления оплат</p>
+
+        <p>Ведение производства с клиентом, информирование его о ходе работы, согласование деталей</p>
+
+        <p>Согласование с клиентом способов решения проблем, обнаруженных при производстве/инспекции</p>
+
+        <p>Мы запускаем заказ ежедневников из натуральной кожи, но выясняется, что на фабрике осталась только искусственная. Времени искать другую фабрику и делать образец нет.Нужно сообщить клиенту об этой ситуации и принять финальное решение по дальнейшей судьбе заказа</p>
+
+        <p>Прием результатов инспекции и решение, какие выявленные недостатки будут считаться браком</p>
+
+        <p>Заказ - бандана, размер 50*50 см. Инспекция обнаружила, что в размере есть погрешность +-1 см практически на каждой бандане. Будем ли мы считать это браком?</p>
+
+        <p><strong>Доставка - Отгрузка</strong></p>
+
+        <p><strong>Примеры и уточнения</strong></p>
+
+        <p>Принятие решения о пересадке заказа на альтернативный путь доставки, если позволяют сроки</p>
+
+        <p>Клиент оплатил авиа, но фабрика закончила производство на 10 дней быстрее, и мы можем пересадить груз на жд без нарушения сроков, прописанных в договоре.</p>
+
+        <p>Расчет доставки груза по России</p>
+
+        <p>Клиент попросил помочь с доставкой заказа в другой регион.СДЭК, Деловые Линии</p>
+
+        <p>Создание закрывающих документов</p>
+
+        <p>Передача необходимых сведений бухгалтеру для отправки документов в ЭДО</p>
+
+        <p>Клиент попросил передать документы в ЭДО</p>
+
+        <p>Решение с клиентом проблем при отгрузке, возникшие со стороны клиента</p>
+
+        <p>Груз необходимо поднять на 23 этаж, лифт в офисе клиента сломался.</p>
+
+        <p>Запол нение таблицы отгрузок для Саши</p>
+
+        <p>Совместная ответственность менеджера по продажам и менеджера по закупкам</p>
+
+        <p>Закрытие проекта</p>
+
+        <p>Примеры и уточнения</p>
+
+        <p>Решение проблем, связанных с качеством и соответствием ТЗ продукции, после отгрузки клиенту</p>
+
+        <p>Клиент говорит, что вместо синих ручек приехали зеленые.Совместная ответственность менеджера по продажам и менеджера по закупкам. Продажи решают вопрос с клиентом, закупки - с фабрикой, ведется параллельная работа с обеих сторон для урегулирования ситуации.</p>
+
+        <p>Запол нение формы и описание проектов для ежемесячной рубрики «Проекты, которые мы закрыли в прошлом месяце»</p>
+
+        <p>Совместная ответственность менеджера по продажам и менеджера по закупкам</p>
+
+        <p>База знаний и инструкций: Материалы для этого урока взяты из инструкции:</p>
+
+        <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+            <button type="button" class="image-lightbox-close" id="imageLightboxClose" aria-label="Закрыть просмотр">×</button>
+            <img id="imageLightboxContent" src="" alt="">
+        </div>
+    </div>
+    <script>
+        (function () {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImage = document.getElementById('imageLightboxContent');
+            const lightboxClose = document.getElementById('imageLightboxClose');
+            const lessonImages = document.querySelectorAll('.container img:not(#imageLightboxContent)');
+            let currentScale = 1;
+
+            function applyZoom() {
+                lightboxImage.style.transform = `scale(${currentScale})`;
+            }
+
+            function resetZoom() {
+                currentScale = 1;
+                applyZoom();
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('is-open');
+                lightbox.setAttribute('aria-hidden', 'true');
+                lightboxImage.src = '';
+                lightboxImage.alt = '';
+                document.body.style.overflow = '';
+                resetZoom();
+            }
+
+            function openLightbox(image) {
+                lightboxImage.src = image.src;
+                lightboxImage.alt = image.alt || '';
+                lightbox.classList.add('is-open');
+                lightbox.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+                resetZoom();
+            }
+
+            lessonImages.forEach((image) => {
+                image.addEventListener('click', () => openLightbox(image));
+            });
+
+            lightboxClose.addEventListener('click', closeLightbox);
+
+            lightbox.addEventListener('click', (event) => {
+                if (event.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            lightbox.addEventListener('wheel', (event) => {
+                if (!lightbox.classList.contains('is-open')) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                const zoomStep = event.deltaY < 0 ? 0.15 : -0.15;
+                currentScale = Math.min(4, Math.max(1, currentScale + zoomStep));
+                applyZoom();
+            }, { passive: false });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+                    closeLightbox();
+                }
+            });
+        }());
+    </script>
+        </main>
+    </div>
+</body>
+</html>
