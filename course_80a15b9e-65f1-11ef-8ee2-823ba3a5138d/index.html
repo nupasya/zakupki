@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кастомизация. Закупки - превью курса</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f7fb; color: #1f2937; }
+        .page { max-width: 1180px; margin: 0 auto; padding: 32px 20px 60px; }
+        .hero { background: linear-gradient(135deg, #696bee, #8c7cf7); color: white; padding: 36px; border-radius: 24px; box-shadow: 0 12px 40px rgba(105,107,238,0.25); }
+        .hero h1 { margin: 0 0 12px; font-size: 34px; line-height: 1.2; }
+        .hero p { margin: 6px 0; opacity: 0.95; font-size: 16px; }
+        .stats { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 20px; }
+        .stat { background: rgba(255,255,255,0.16); padding: 12px 16px; border-radius: 14px; min-width: 180px; }
+        .toc { background: white; margin-top: 24px; padding: 24px; border-radius: 20px; box-shadow: 0 8px 24px rgba(15,23,42,0.06); }
+        .toc h2 { margin: 0 0 16px; font-size: 22px; }
+        .toc ul { margin: 0; padding-left: 18px; columns: 2; }
+        .toc li { margin: 8px 0; }
+        .section { margin-top: 28px; background: white; border-radius: 22px; padding: 24px; box-shadow: 0 8px 24px rgba(15,23,42,0.06); }
+        .section h2 { margin: 0 0 6px; font-size: 24px; }
+        .section-meta { color: #6b7280; margin-bottom: 18px; font-size: 14px; }
+        .lessons { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+        .lesson-card { border: 1px solid #e5e7eb; border-radius: 18px; padding: 18px; background: #fcfcff; }
+        .lesson-card h3 { margin: 0 0 10px; font-size: 18px; line-height: 1.35; }
+        .lesson-meta { font-size: 14px; color: #6b7280; margin: 4px 0; }
+        .badge { display: inline-block; margin-bottom: 12px; padding: 6px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+        .badge.ok { background: #dcfce7; color: #166534; }
+        .badge.miss { background: #fee2e2; color: #991b1b; }
+        .open-link { display: inline-block; margin-top: 12px; text-decoration: none; color: white; background: #696bee; padding: 10px 14px; border-radius: 12px; font-weight: 600; }
+        .missing { margin-top: 12px; color: #b45309; font-size: 14px; }
+        .back-link { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 20px; padding: 10px 18px; border-radius: 12px; background: rgba(255,255,255,0.15); color: white; text-decoration: none; font-weight: 600; font-size: 14px; }
+        .back-link:hover { background: rgba(255,255,255,0.22); }
+        @media (max-width: 800px) { .toc ul { columns: 1; } .hero h1 { font-size: 28px; } }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <section class="hero">
+            <a class="back-link" href="../manager-po-zakupkam/index.html">← Назад ко всем курсам</a>
+            <h1>Кастомизация. Закупки</h1>
+            <p>Демо-воссоздание курса вне iSpring. Это черновой preview того, как курс можно собрать на корпоративном сервере.</p>
+            <p>ID курса: <strong>80a15b9e-65f1-11ef-8ee2-823ba3a5138d</strong></p>
+            <div class="stats">
+                <div class="stat"><div>Разделов</div><strong>2</strong></div>
+                <div class="stat"><div>Уроков в структуре</div><strong>20</strong></div>
+                <div class="stat"><div>Уроков уже собрано</div><strong>20</strong></div>
+            </div>
+        </section>
+        <section class="toc">
+            <h2>Содержание курса</h2>
+            <ul>
+                <li>База по кастомизации</li>
+                <li>Способы нанесения и кастомизации</li>
+            </ul>
+        </section>
+        <section class="section">
+            <h2>База по кастомизации</h2>
+            <div class="section-meta">Уроков: 3</div>
+            <div class="lessons">
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>Полезные термины. Говорим как профи</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s01-01-полезные-термины-говорим-как-профи.html">Открыть урок</a>
+                </article>
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>Векторное и растровое изображение</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s01-02-векторное-и-растровое-изображение.html">Открыть урок</a>
+                </article>
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>Шпаргалка по способам нанесений</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s01-03-шпаргалка-по-способам-нанесений.html">Открыть урок</a>
+                </article>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Способы нанесения и кастомизации</h2>
+            <div class="section-meta">Уроков: 17</div>
+            <div class="lessons">
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>Вышивка</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s02-01-вышивка.html">Открыть урок</a>
+                </article>
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>Вязание с логотипом</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s02-02-вязание-с-логотипом.html">Открыть урок</a>
+                </article>
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>Другая кастомизация</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s02-03-другая-кастомизация.html">Открыть урок</a>
+                </article>
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>Изготовление наклеек</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s02-04-изготовление-наклеек.html">Открыть урок</a>
+                </article>
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>Иммерсионная печать</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s02-05-иммерсионная-печать.html">Открыть урок</a>
+                </article>
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>Лазерная гравировка</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s02-06-лазерная-гравировка.html">Открыть урок</a>
+                </article>
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>Надглазурная деколь</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s02-07-надглазурная-деколь.html">Открыть урок</a>
+                </article>
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>Нанесение этикеток In-Mould Labels (IML)</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s02-08-нанесение-этикеток-in-mould-labels-iml.html">Открыть урок</a>
+                </article>
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>Прямая печать на ткани</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s02-09-прямая-печать-на-ткани.html">Открыть урок</a>
+                </article>
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>Сублимационная печать</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s02-10-сублимационная-печать.html">Открыть урок</a>
+                </article>
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>Тампопечать</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s02-11-тампопечать.html">Открыть урок</a>
+                </article>
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>Термотрансфер</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s02-12-термотрансфер.html">Открыть урок</a>
+                </article>
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>Тиснение</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s02-13-тиснение.html">Открыть урок</a>
+                </article>
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>УФ-печать</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s02-14-уф-печать.html">Открыть урок</a>
+                </article>
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>Флекс</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s02-15-флекс.html">Открыть урок</a>
+                </article>
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>Цифровая печать</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s02-16-цифровая-печать.html">Открыть урок</a>
+                </article>
+                <article class="lesson-card">
+                    <div class="badge ok">Пройден</div>
+                    <h3>Шелкография</h3>
+                    <div class="lesson-meta">Тип: Лонгрид</div>
+                    <a class="open-link" href="lessons/s02-17-шелкография.html">Открыть урок</a>
+                </article>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
