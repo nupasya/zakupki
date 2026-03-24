@@ -1,0 +1,106 @@
+﻿{
+  "course_id": "ded3ffec-2707-11ef-8237-eac37ffd8f39",
+  "course_title": "Часть 3. Документация",
+  "output_index": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_ded3ffec-2707-11ef-8237-eac37ffd8f39\\index.html",
+  "created_pages": 7,
+  "missing_lessons": 0,
+  "sections": [
+    {
+      "title": "Введение",
+      "lessons": [
+        {
+          "title": "О чем этот курс",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s01-01-о-чем-этот-курс.html",
+          "source_title": "О чем этот курс",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_ded3ffec-2707-11ef-8237-eac37ffd8f39\\lessons\\s01-01-о-чем-этот-курс.html",
+          "blocks_count": 10,
+          "navigation_count": 0
+        }
+      ]
+    },
+    {
+      "title": "Документы",
+      "lessons": [
+        {
+          "title": "Договоры, приложения",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-01-договоры-приложения.html",
+          "source_title": "Договоры, приложения",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_ded3ffec-2707-11ef-8237-eac37ffd8f39\\lessons\\s02-01-договоры-приложения.html",
+          "blocks_count": 55,
+          "navigation_count": 6
+        },
+        {
+          "title": "ЭДО. Инструкция",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-02-эдо-инструкция.html",
+          "source_title": "ЭДО. Инструкция",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_ded3ffec-2707-11ef-8237-eac37ffd8f39\\lessons\\s02-02-эдо-инструкция.html",
+          "blocks_count": 22,
+          "navigation_count": 2
+        }
+      ]
+    },
+    {
+      "title": "Работа в Мой Склад",
+      "lessons": [
+        {
+          "title": "Создание заказа в Мой склад",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s03-01-создание-заказа-в-мой-склад.html",
+          "source_title": "Создание заказа в Мой склад",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_ded3ffec-2707-11ef-8237-eac37ffd8f39\\lessons\\s03-01-создание-заказа-в-мой-склад.html",
+          "blocks_count": 48,
+          "navigation_count": 3
+        },
+        {
+          "title": "Выставление Счета в Мой Склад",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s03-02-выставление-счета-в-мой-склад.html",
+          "source_title": "Выставление Счета в Мой Склад",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_ded3ffec-2707-11ef-8237-eac37ffd8f39\\lessons\\s03-02-выставление-счета-в-мой-склад.html",
+          "blocks_count": 57,
+          "navigation_count": 5
+        },
+        {
+          "title": "Оформление отгрузки в Мой Склад",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s03-03-оформление-отгрузки-в-мой-склад.html",
+          "source_title": "Оформление отгрузки в Мой Склад",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_ded3ffec-2707-11ef-8237-eac37ffd8f39\\lessons\\s03-03-оформление-отгрузки-в-мой-склад.html",
+          "blocks_count": 39,
+          "navigation_count": 2
+        }
+      ]
+    },
+    {
+      "title": "Финал проекта",
+      "lessons": [
+        {
+          "title": "Закрытие проекта. Подсчет расходов по проекту",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s04-01-закрытие-проекта-подсчет-расходов-по-проекту.html",
+          "source_title": "Закрытие проекта. Подсчет расходов по проекту",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_ded3ffec-2707-11ef-8237-eac37ffd8f39\\lessons\\s04-01-закрытие-проекта-подсчет-расходов-по-проекту.html",
+          "blocks_count": 42,
+          "navigation_count": 3
+        }
+      ]
+    }
+  ]
+}
