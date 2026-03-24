@@ -1,0 +1,151 @@
+﻿{
+  "course_id": "780e8082-5aee-11ef-aaea-aaf0727082fc",
+  "course_title": "Работа с Китаем и наши процессы",
+  "output_index": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_780e8082-5aee-11ef-aaea-aaf0727082fc\\index.html",
+  "created_pages": 12,
+  "missing_lessons": 0,
+  "sections": [
+    {
+      "title": "Введение",
+      "lessons": [
+        {
+          "title": "О чем этот курс?",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s01-01-о-чем-этот-курс.html",
+          "source_title": "О чем этот курс?",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_780e8082-5aee-11ef-aaea-aaf0727082fc\\lessons\\s01-01-о-чем-этот-курс.html",
+          "blocks_count": 14,
+          "navigation_count": 0
+        }
+      ]
+    },
+    {
+      "title": "Основной курс",
+      "lessons": [
+        {
+          "title": "1. Особенности работы с Китаем: почему один товар может стоить по-разному и на что обратить внимание",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-01-1-особенности-работы-с-китаем-почему-один-товар-может-стоить-по-разному-и-на-что-обратить-внимание.html",
+          "source_title": "1. Особенности работы с Китаем: почему один товар может стоить по-разному и на что обратить внимание",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_780e8082-5aee-11ef-aaea-aaf0727082fc\\lessons\\s02-01-1-особенности-работы-с-китаем-почему-один-товар-может-стоить-по-разному-и-на-что-обратить-внимание.html",
+          "blocks_count": 41,
+          "navigation_count": 3
+        },
+        {
+          "title": "2. Время на проработку запроса",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-02-2-время-на-проработку-запроса.html",
+          "source_title": "2. Время на проработку запроса",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_780e8082-5aee-11ef-aaea-aaf0727082fc\\lessons\\s02-02-2-время-на-проработку-запроса.html",
+          "blocks_count": 35,
+          "navigation_count": 4
+        },
+        {
+          "title": "3. Производство: часто задаваемые вопросы",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-03-3-производство-часто-задаваемые-вопросы.html",
+          "source_title": "3. Производство: часто задаваемые вопросы",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_780e8082-5aee-11ef-aaea-aaf0727082fc\\lessons\\s02-03-3-производство-часто-задаваемые-вопросы.html",
+          "blocks_count": 18,
+          "navigation_count": 0
+        },
+        {
+          "title": "4. Складские остатки: на складах фабрик всё всегда в наличии?",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-04-4-складские-остатки-на-складах-фабрик-вс-всегда-в-наличии.html",
+          "source_title": "4. Складские остатки: на складах фабрик всё всегда в наличии?",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_780e8082-5aee-11ef-aaea-aaf0727082fc\\lessons\\s02-04-4-складские-остатки-на-складах-фабрик-вс-всегда-в-наличии.html",
+          "blocks_count": 3,
+          "navigation_count": 0
+        },
+        {
+          "title": "5. Образцы: откуда берутся и для чего нужны",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-05-5-образцы-откуда-берутся-и-для-чего-нужны.html",
+          "source_title": "5. Образцы: откуда берутся и для чего нужны",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_780e8082-5aee-11ef-aaea-aaf0727082fc\\lessons\\s02-05-5-образцы-откуда-берутся-и-для-чего-нужны.html",
+          "blocks_count": 11,
+          "navigation_count": 0
+        },
+        {
+          "title": "6. Провоз через границу: коды ТНВЭД и дополнительные документы",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-06-6-провоз-через-границу-коды-тнвэд-и-дополнительные-документы.html",
+          "source_title": "6. Провоз через границу: коды ТНВЭД и дополнительные документы",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_780e8082-5aee-11ef-aaea-aaf0727082fc\\lessons\\s02-06-6-провоз-через-границу-коды-тнвэд-и-дополнительные-документы.html",
+          "blocks_count": 14,
+          "navigation_count": 1
+        },
+        {
+          "title": "7. Что такое таможня и зачем нам разрешительное письмо",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-07-7-что-такое-таможня-и-зачем-нам-разрешительное-письмо.html",
+          "source_title": "7. Что такое таможня и зачем нам разрешительное письмо",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_780e8082-5aee-11ef-aaea-aaf0727082fc\\lessons\\s02-07-7-что-такое-таможня-и-зачем-нам-разрешительное-письмо.html",
+          "blocks_count": 13,
+          "navigation_count": 2
+        },
+        {
+          "title": "8. Контейнерные перевозки",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-08-8-контейнерные-перевозки.html",
+          "source_title": "8. Контейнерные перевозки",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_780e8082-5aee-11ef-aaea-aaf0727082fc\\lessons\\s02-08-8-контейнерные-перевозки.html",
+          "blocks_count": 6,
+          "navigation_count": 0
+        },
+        {
+          "title": "9. Почему мы работаем в белую: о ГТД, контрабанде и контрафакте",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-09-9-почему-мы-работаем-в-белую-о-гтд-контрабанде-и-контрафакте.html",
+          "source_title": "9. Почему мы работаем “в белую”: о ГТД, контрабанде и контрафакте",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_780e8082-5aee-11ef-aaea-aaf0727082fc\\lessons\\s02-09-9-почему-мы-работаем-в-белую-о-гтд-контрабанде-и-контрафакте.html",
+          "blocks_count": 11,
+          "navigation_count": 1
+        },
+        {
+          "title": "10. Почему мы стараемся не завышать ожидания по продукту",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-10-10-почему-мы-стараемся-не-завышать-ожидания-по-продукту.html",
+          "source_title": "10. Почему мы стараемся не завышать ожидания по продукту",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_780e8082-5aee-11ef-aaea-aaf0727082fc\\lessons\\s02-10-10-почему-мы-стараемся-не-завышать-ожидания-по-продукту.html",
+          "blocks_count": 4,
+          "navigation_count": 0
+        },
+        {
+          "title": "11. Опять отдыхают? Календарь китайских праздников",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-11-11-опять-отдыхают-календарь-китайских-праздников.html",
+          "source_title": "11. Опять отдыхают? Календарь китайских праздников",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_780e8082-5aee-11ef-aaea-aaf0727082fc\\lessons\\s02-11-11-опять-отдыхают-календарь-китайских-праздников.html",
+          "blocks_count": 8,
+          "navigation_count": 1
+        }
+      ]
+    }
+  ]
+}

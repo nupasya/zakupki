@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6. Провоз через границу: коды ТНВЭД и дополнительные документы</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f5f5;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+            border-bottom: 3px solid #696BEE;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #2a2a2a;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #3a3a3a;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .highlighted {
+            background: #f0f4ff;
+            padding: 16px 20px;
+            border-left: 4px solid #696BEE;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .numbered-item {
+            padding: 12px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .numbered-item:last-child {
+            border-bottom: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: zoom-in;
+        }
+
+        .toc {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .toc li:last-child {
+            border-bottom: none;
+        }
+
+        strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 2px;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #696BEE;
+            border-radius: 2px;
+            width: 100%;
+        }
+
+        .image-lightbox {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+            background: rgba(17, 24, 39, 0.88);
+            z-index: 9999;
+        }
+
+        .image-lightbox.is-open {
+            display: flex;
+        }
+
+        .image-lightbox img {
+            max-width: min(95vw, 1400px);
+            max-height: 88vh;
+            margin: 0;
+            border-radius: 10px;
+            box-shadow: 0 16px 60px rgba(0,0,0,0.45);
+            cursor: default;
+            transform: scale(1);
+            transform-origin: center center;
+            transition: transform 0.08s ease-out;
+        }
+
+        .image-lightbox-close {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 44px;
+            height: 44px;
+            border: none;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.18);
+            color: #fff;
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .image-lightbox-close:hover {
+            background: rgba(255,255,255,0.28);
+        }
+    
+        body {
+            max-width: none;
+            margin: 0;
+            padding: 0;
+            background: #eef2ff;
+        }
+
+        .course-sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 260px;
+            z-index: 100;
+            overflow-y: auto;
+        }
+
+        .course-sidebar-inner {
+            background: #111827;
+            color: #fff;
+            min-height: 100%;
+            padding: 22px 16px 32px;
+            box-shadow: 4px 0 24px rgba(17, 24, 39, 0.18);
+        }
+
+        .lesson-layout {
+            margin-left: 260px;
+            padding: 32px 36px 60px;
+        }
+
+        .lesson-main {
+            max-width: 1060px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1060px;
+            margin: 0 auto;
+            border-radius: 20px;
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+        }
+
+        .course-sidebar-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.62);
+        }
+
+        .course-sidebar-title {
+            margin: 10px 0 18px;
+            font-size: 20px;
+            line-height: 1.25;
+            color: #fff;
+        }
+
+        .course-sidebar-back-link {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 18px;
+            padding: 10px 12px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.10);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .course-sidebar-back-link:hover {
+            background: rgba(255,255,255,0.16);
+        }
+
+        .course-progress-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 18px;
+            padding: 14px;
+            margin-bottom: 18px;
+        }
+
+        .course-progress-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: baseline;
+            font-size: 13px;
+        }
+
+        .course-progress-top strong {
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .course-progress-bar {
+            height: 8px;
+            background: rgba(255,255,255,0.12);
+            border-radius: 999px;
+            overflow: hidden;
+            margin: 12px 0 8px;
+        }
+
+        .course-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #818cf8, #c4b5fd);
+            border-radius: 999px;
+        }
+
+        .course-progress-meta {
+            color: rgba(255,255,255,0.7);
+            font-size: 12px;
+        }
+
+        .course-sidebar-section + .course-sidebar-section {
+            margin-top: 16px;
+        }
+
+        .course-sidebar-section-title {
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .course-sidebar-lessons {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .course-sidebar-lesson {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 14px;
+            text-decoration: none;
+            color: rgba(255,255,255,0.88);
+            background: rgba(255,255,255,0.04);
+            border: 1px solid transparent;
+            font-size: 14px;
+            line-height: 1.35;
+        }
+
+        .course-sidebar-lesson:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.08);
+        }
+
+        .course-sidebar-lesson.is-current {
+            background: rgba(129,140,248,0.24);
+            border-color: rgba(196,181,253,0.55);
+            color: #fff;
+        }
+
+        .course-sidebar-lesson.is-completed .course-sidebar-status {
+            background: #22c55e;
+            color: #052e16;
+        }
+
+        .course-sidebar-lesson.is-locked {
+            color: rgba(255,255,255,0.45);
+            background: rgba(255,255,255,0.03);
+        }
+
+        .course-sidebar-status {
+            flex: 0 0 auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.14);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .course-sidebar-status.locked {
+            background: rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.45);
+        }
+
+        .progress-fill {
+            width: 58%;
+        }
+
+        @media (max-width: 900px) {
+            .course-sidebar {
+                position: static;
+                width: 100%;
+                bottom: auto;
+            }
+
+            .course-sidebar-inner {
+                min-height: auto;
+                padding: 20px 16px;
+            }
+
+            .lesson-layout {
+                margin-left: 0;
+                padding: 20px;
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="lesson-layout">
+<aside class="course-sidebar">
+    <div class="course-sidebar-inner">
+        <div class="course-sidebar-label">Программа курса</div>
+        <h2 class="course-sidebar-title">Работа с Китаем и наши процессы</h2>
+        <a class="course-sidebar-back-link" href="../index.html">Назад к курсу</a>
+        <div class="course-progress-card">
+            <div class="course-progress-top"><span>Прогресс preview</span><strong>7 из 12</strong></div>
+            <div class="course-progress-bar"><div class="course-progress-fill" style="width: 58%"></div></div>
+            <div class="course-progress-meta">58% пути по собранным урокам</div>
+        </div>
+        <div class="course-sidebar-sections">
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Введение</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson is-completed" href="s01-01-о-чем-этот-курс.html"><span class="course-sidebar-status">1</span><span>О чем этот курс?</span></a>
+                </div>
+            </div>
+            <div class="course-sidebar-section">
+                <div class="course-sidebar-section-title">Основной курс</div>
+                <div class="course-sidebar-lessons">
+                    <a class="course-sidebar-lesson is-completed" href="s02-01-1-особенности-работы-с-китаем-почему-один-товар-может-стоить-по-разному-и-на-что-обратить-внимание.html"><span class="course-sidebar-status">2</span><span>1. Особенности работы с Китаем: почему один товар может стоить по-разному и на что обратить внимание</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s02-02-2-время-на-проработку-запроса.html"><span class="course-sidebar-status">3</span><span>2. Время на проработку запроса</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s02-03-3-производство-часто-задаваемые-вопросы.html"><span class="course-sidebar-status">4</span><span>3. Производство: часто задаваемые вопросы</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s02-04-4-складские-остатки-на-складах-фабрик-вс-всегда-в-наличии.html"><span class="course-sidebar-status">5</span><span>4. Складские остатки: на складах фабрик всё всегда в наличии?</span></a>
+                    <a class="course-sidebar-lesson is-completed" href="s02-05-5-образцы-откуда-берутся-и-для-чего-нужны.html"><span class="course-sidebar-status">6</span><span>5. Образцы: откуда берутся и для чего нужны</span></a>
+                    <a class="course-sidebar-lesson is-current" href="s02-06-6-провоз-через-границу-коды-тнвэд-и-дополнительные-документы.html"><span class="course-sidebar-status">7</span><span>6. Провоз через границу: коды ТНВЭД и дополнительные документы</span></a>
+                    <a class="course-sidebar-lesson" href="s02-07-7-что-такое-таможня-и-зачем-нам-разрешительное-письмо.html"><span class="course-sidebar-status">8</span><span>7. Что такое таможня и зачем нам разрешительное письмо</span></a>
+                    <a class="course-sidebar-lesson" href="s02-08-8-контейнерные-перевозки.html"><span class="course-sidebar-status">9</span><span>8. Контейнерные перевозки</span></a>
+                    <a class="course-sidebar-lesson" href="s02-09-9-почему-мы-работаем-в-белую-о-гтд-контрабанде-и-контрафакте.html"><span class="course-sidebar-status">10</span><span>9. Почему мы работаем в белую: о ГТД, контрабанде и контрафакте</span></a>
+                    <a class="course-sidebar-lesson" href="s02-10-10-почему-мы-стараемся-не-завышать-ожидания-по-продукту.html"><span class="course-sidebar-status">11</span><span>10. Почему мы стараемся не завышать ожидания по продукту</span></a>
+                    <a class="course-sidebar-lesson" href="s02-11-11-опять-отдыхают-календарь-китайских-праздников.html"><span class="course-sidebar-status">12</span><span>11. Опять отдыхают? Календарь китайских праздников</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+        <main class="lesson-main">
+    <div class="container">
+        <h1>6. Провоз через границу: коды ТНВЭД и дополнительные документы</h1>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="toc">
+            <h3>Содержание:</h3>
+            <ul>
+                <li>• Виды таможенных платежей:</li>
+            </ul>
+        </div>
+
+        <p><strong>Коды Товарной номенклатуры внешнеэкономической деятельности, или Коды ТН ВЭД</strong> , представляют собой стандартизированную систему, используемую для классификации товаров международной торговли. Эти коды присваиваются конкретным продуктам в зависимости от их характеристик, состава и предполагаемого использования. Система кодов используется таможенными органами по всему миру для облегчения классификации, документирования и регулирования продаваемых товаров.</p>
+
+        <p><strong>Ставка -</strong> это стоимость логистики, рассчитывается отдельно для каждого товара исходя из его габаритов, веса, стоимости, материала и особенностей упаковки и перевозки.</p>
+
+        <p>Каждый раз после получения запроса на поиск и расчет нового товара, наш специалист отдела закупок запрашивает расчет стоимости доставки этого товара у нашего таможенного брокера. На основе описания, характеристик товара и материала, таможенный специалист присваивает товару соответствующий код ТН ВЭД. В зависимости от кода меняется сумма таможенных платежей и необходимость оформления дополнительных документов. Например, одной и той же модели кружки, но выполненной из разных материалов, может быть присвоен разный код ТН ВЭД, соответственно, назначены разные таможенные платежи.</p>
+
+        <h2>Виды таможенных платежей:</h2>
+
+        <div class="highlighted">
+            <p>вывозная таможенная пошлина - оплачивается в Китае;</p>
+        </div>
+
+        <div class="highlighted">
+            <p>ввозная таможенная пошлина - оплачивается в России;</p>
+        </div>
+
+        <div class="highlighted">
+            <p>налог на добавленную стоимость - взимается при ввозе товаров на таможенную территорию Союза;</p>
+        </div>
+
+        <div class="highlighted">
+            <p>таможенные сбор - это обязательный платеж при прохождении таможни.</p>
+        </div>
+
+        <p>Каждый груз проходит все таможенные оформления и оплату всех таможенных платежей, поэтому, чем больше тираж, тем ниже цена единицы товара, так как все таможенные сборы распределяются на весь тираж равномерно. При частичной отгрузке товара стоимость разного количества будет немного отличаться, так как стоимость логистики остается неизменной, а таможенные сборы, распределенные на меньшее количество, поднимут стоимость единицы товара.</p>
+
+        <p>При необходимости оформления дополнительных документов мы предупреждаем клиента о дополнительных затратах, увеличении срока доставки и берем все хлопоты по их оформлению на себя. Какие дополнительные документы могут понадобиться:</p>
+
+        <div class="highlighted">
+            <p><strong>Декларация соответствия (ДС)</strong> - стоимость около 15 тыс руб., время оформления 2 недели, необходима для провоза обуви, текстильный продукции, посуды, мелкой электроники;</p>
+        </div>
+
+        <div class="highlighted">
+            <p><strong>Сертификат соответствия (СС)</strong> - стоимость около 85 тыс руб., время оформления 3 недели, необходим для провоза медицинского и кухонного оборудования, мелкой электроники, детских игрушек, лакокрасочной и косметической продукции;</p>
+        </div>
+
+        <div class="highlighted">
+            <p><strong>Свидетельство о гос. регистрации товара (СГР)</strong> - этот документ индивидуален для каждого продукта, ориентировочная стоимость 100 тыс руб., время оформления около 4 месяцев. Это документ делается единоразово на конкретный товар и действует в течении 5 лет. СГР необходимо для провоза продукции, предназначенной для детей, косметической и пищевой продукции, медицинского оборудования и предметов личной гигиены.</p>
+        </div>
+
+        <p>Важно отметить, что оформление документов мы начинаем параллельно с запуском производства тиража, поэтому чаще всего документы не влияют на сроки поставки.</p>
+
+        <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+            <button type="button" class="image-lightbox-close" id="imageLightboxClose" aria-label="Закрыть просмотр">×</button>
+            <img id="imageLightboxContent" src="" alt="">
+        </div>
+    </div>
+    <script>
+        (function () {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImage = document.getElementById('imageLightboxContent');
+            const lightboxClose = document.getElementById('imageLightboxClose');
+            const lessonImages = document.querySelectorAll('.container img:not(#imageLightboxContent)');
+            let currentScale = 1;
+
+            function applyZoom() {
+                lightboxImage.style.transform = `scale(${currentScale})`;
+            }
+
+            function resetZoom() {
+                currentScale = 1;
+                applyZoom();
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('is-open');
+                lightbox.setAttribute('aria-hidden', 'true');
+                lightboxImage.src = '';
+                lightboxImage.alt = '';
+                document.body.style.overflow = '';
+                resetZoom();
+            }
+
+            function openLightbox(image) {
+                lightboxImage.src = image.src;
+                lightboxImage.alt = image.alt || '';
+                lightbox.classList.add('is-open');
+                lightbox.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+                resetZoom();
+            }
+
+            lessonImages.forEach((image) => {
+                image.addEventListener('click', () => openLightbox(image));
+            });
+
+            lightboxClose.addEventListener('click', closeLightbox);
+
+            lightbox.addEventListener('click', (event) => {
+                if (event.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            lightbox.addEventListener('wheel', (event) => {
+                if (!lightbox.classList.contains('is-open')) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                const zoomStep = event.deltaY < 0 ? 0.15 : -0.15;
+                currentScale = Math.min(4, Math.max(1, currentScale + zoomStep));
+                applyZoom();
+            }, { passive: false });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+                    closeLightbox();
+                }
+            });
+        }());
+    </script>
+        </main>
+    </div>
+</body>
+</html>
