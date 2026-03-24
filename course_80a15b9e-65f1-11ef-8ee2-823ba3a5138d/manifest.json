@@ -3,20 +3,20 @@
   "course_title": "Кастомизация. Закупки",
   "output_index": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\index.html",
   "created_pages": 20,
-  "missing_lessons": 0,
+  "missing_lessons": 5,
   "sections": [
     {
-      "title": "База по кастомизации",
+      "title": "Полезные материалы для работы с кастомизацией",
       "lessons": [
         {
-          "title": "Полезные термины. Говорим как профи",
+          "title": "Шпаргалка по способам нанесений",
           "type": "Лонгрид",
           "status": "Завершен",
           "available": true,
-          "relative_link": "lessons/s01-01-полезные-термины-говорим-как-профи.html",
-          "source_title": "Полезные термины. Говорим как профи",
-          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s01-01-полезные-термины-говорим-как-профи.html",
-          "blocks_count": 205,
+          "relative_link": "lessons/s01-01-шпаргалка-по-способам-нанесений.html",
+          "source_title": "Шпаргалка по способам нанесений",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s01-01-шпаргалка-по-способам-нанесений.html",
+          "blocks_count": 123,
           "navigation_count": 0
         },
         {
@@ -31,129 +31,59 @@
           "navigation_count": 1
         },
         {
-          "title": "Шпаргалка по способам нанесений",
+          "title": "Тест. Векторное и растровое изображение",
+          "type": "Онлайн-тест",
+          "status": "Пройден (100%/80%)",
+          "available": false,
+          "relative_link": null
+        },
+        {
+          "title": "Полезные термины. Говорим как профи",
           "type": "Лонгрид",
           "status": "Завершен",
           "available": true,
-          "relative_link": "lessons/s01-03-шпаргалка-по-способам-нанесений.html",
-          "source_title": "Шпаргалка по способам нанесений",
-          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s01-03-шпаргалка-по-способам-нанесений.html",
-          "blocks_count": 123,
+          "relative_link": "lessons/s01-04-полезные-термины-говорим-как-профи.html",
+          "source_title": "Полезные термины. Говорим как профи",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s01-04-полезные-термины-говорим-как-профи.html",
+          "blocks_count": 205,
           "navigation_count": 0
         }
       ]
     },
     {
-      "title": "Способы нанесения и кастомизации",
+      "title": "Подробно о видах нанесения",
       "lessons": [
+        {
+          "title": "Шелкография",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-01-шелкография.html",
+          "source_title": "Шелкография",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-01-шелкография.html",
+          "blocks_count": 41,
+          "navigation_count": 4
+        },
+        {
+          "title": "Флекс",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-02-флекс.html",
+          "source_title": "Флекс",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-02-флекс.html",
+          "blocks_count": 26,
+          "navigation_count": 2
+        },
         {
           "title": "Вышивка",
           "type": "Лонгрид",
           "status": "Завершен",
           "available": true,
-          "relative_link": "lessons/s02-01-вышивка.html",
+          "relative_link": "lessons/s02-03-вышивка.html",
           "source_title": "Вышивка",
-          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-01-вышивка.html",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-03-вышивка.html",
           "blocks_count": 31,
-          "navigation_count": 3
-        },
-        {
-          "title": "Вязание с логотипом",
-          "type": "Лонгрид",
-          "status": "Завершен",
-          "available": true,
-          "relative_link": "lessons/s02-02-вязание-с-логотипом.html",
-          "source_title": "Вязание с логотипом",
-          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-02-вязание-с-логотипом.html",
-          "blocks_count": 18,
-          "navigation_count": 6
-        },
-        {
-          "title": "Другая кастомизация",
-          "type": "Лонгрид",
-          "status": "Завершен",
-          "available": true,
-          "relative_link": "lessons/s02-03-другая-кастомизация.html",
-          "source_title": "Другая кастомизация",
-          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-03-другая-кастомизация.html",
-          "blocks_count": 121,
-          "navigation_count": 12
-        },
-        {
-          "title": "Изготовление наклеек",
-          "type": "Лонгрид",
-          "status": "Завершен",
-          "available": true,
-          "relative_link": "lessons/s02-04-изготовление-наклеек.html",
-          "source_title": "Изготовление наклеек",
-          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-04-изготовление-наклеек.html",
-          "blocks_count": 19,
-          "navigation_count": 2
-        },
-        {
-          "title": "Иммерсионная печать",
-          "type": "Лонгрид",
-          "status": "Завершен",
-          "available": true,
-          "relative_link": "lessons/s02-05-иммерсионная-печать.html",
-          "source_title": "Иммерсионная печать",
-          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-05-иммерсионная-печать.html",
-          "blocks_count": 24,
-          "navigation_count": 2
-        },
-        {
-          "title": "Лазерная гравировка",
-          "type": "Лонгрид",
-          "status": "Завершен",
-          "available": true,
-          "relative_link": "lessons/s02-06-лазерная-гравировка.html",
-          "source_title": "Лазерная гравировка",
-          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-06-лазерная-гравировка.html",
-          "blocks_count": 36,
-          "navigation_count": 3
-        },
-        {
-          "title": "Надглазурная деколь",
-          "type": "Лонгрид",
-          "status": "Завершен",
-          "available": true,
-          "relative_link": "lessons/s02-07-надглазурная-деколь.html",
-          "source_title": "Надглазурная деколь",
-          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-07-надглазурная-деколь.html",
-          "blocks_count": 21,
-          "navigation_count": 3
-        },
-        {
-          "title": "Нанесение этикеток In-Mould Labels (IML)",
-          "type": "Лонгрид",
-          "status": "Завершен",
-          "available": true,
-          "relative_link": "lessons/s02-08-нанесение-этикеток-in-mould-labels-iml.html",
-          "source_title": "Нанесение этикеток In-Mould Labels (IML)",
-          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-08-нанесение-этикеток-in-mould-labels-iml.html",
-          "blocks_count": 49,
-          "navigation_count": 8
-        },
-        {
-          "title": "Прямая печать на ткани",
-          "type": "Лонгрид",
-          "status": "Завершен",
-          "available": true,
-          "relative_link": "lessons/s02-09-прямая-печать-на-ткани.html",
-          "source_title": "Прямая печать на ткани",
-          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-09-прямая-печать-на-ткани.html",
-          "blocks_count": 19,
-          "navigation_count": 3
-        },
-        {
-          "title": "Сублимационная печать",
-          "type": "Лонгрид",
-          "status": "Завершен",
-          "available": true,
-          "relative_link": "lessons/s02-10-сублимационная-печать.html",
-          "source_title": "Сублимационная печать",
-          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-10-сублимационная-печать.html",
-          "blocks_count": 24,
           "navigation_count": 3
         },
         {
@@ -161,31 +91,27 @@
           "type": "Лонгрид",
           "status": "Завершен",
           "available": true,
-          "relative_link": "lessons/s02-11-тампопечать.html",
+          "relative_link": "lessons/s02-04-тампопечать.html",
           "source_title": "Тампопечать",
-          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-11-тампопечать.html",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-04-тампопечать.html",
           "blocks_count": 28,
           "navigation_count": 3
         },
         {
-          "title": "Термотрансфер",
-          "type": "Лонгрид",
-          "status": "Завершен",
-          "available": true,
-          "relative_link": "lessons/s02-12-термотрансфер.html",
-          "source_title": "Термотрансфер",
-          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-12-термотрансфер.html",
-          "blocks_count": 34,
-          "navigation_count": 3
+          "title": "1 Тест: Проверка знаний по методам нанесения изображений",
+          "type": "Онлайн-тест",
+          "status": "В процессе",
+          "available": false,
+          "relative_link": null
         },
         {
-          "title": "Тиснение",
+          "title": "Надглазурная деколь",
           "type": "Лонгрид",
           "status": "Завершен",
           "available": true,
-          "relative_link": "lessons/s02-13-тиснение.html",
-          "source_title": "Тиснение",
-          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-13-тиснение.html",
+          "relative_link": "lessons/s02-06-надглазурная-деколь.html",
+          "source_title": "Надглазурная деколь",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-06-надглазурная-деколь.html",
           "blocks_count": 21,
           "navigation_count": 3
         },
@@ -194,44 +120,153 @@
           "type": "Лонгрид",
           "status": "Завершен",
           "available": true,
-          "relative_link": "lessons/s02-14-уф-печать.html",
+          "relative_link": "lessons/s02-07-уф-печать.html",
           "source_title": "УФ-печать",
-          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-14-уф-печать.html",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-07-уф-печать.html",
           "blocks_count": 29,
           "navigation_count": 3
-        },
-        {
-          "title": "Флекс",
-          "type": "Лонгрид",
-          "status": "Завершен",
-          "available": true,
-          "relative_link": "lessons/s02-15-флекс.html",
-          "source_title": "Флекс",
-          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-15-флекс.html",
-          "blocks_count": 26,
-          "navigation_count": 2
         },
         {
           "title": "Цифровая печать",
           "type": "Лонгрид",
           "status": "Завершен",
           "available": true,
-          "relative_link": "lessons/s02-16-цифровая-печать.html",
+          "relative_link": "lessons/s02-08-цифровая-печать.html",
           "source_title": "Цифровая печать",
-          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-16-цифровая-печать.html",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-08-цифровая-печать.html",
           "blocks_count": 19,
           "navigation_count": 3
         },
         {
-          "title": "Шелкография",
+          "title": "Тиснение",
           "type": "Лонгрид",
           "status": "Завершен",
           "available": true,
-          "relative_link": "lessons/s02-17-шелкография.html",
-          "source_title": "Шелкография",
-          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-17-шелкография.html",
-          "blocks_count": 41,
-          "navigation_count": 4
+          "relative_link": "lessons/s02-09-тиснение.html",
+          "source_title": "Тиснение",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-09-тиснение.html",
+          "blocks_count": 21,
+          "navigation_count": 3
+        },
+        {
+          "title": "2. Тест: Проверка знаний по методам нанесения изображений",
+          "type": "Онлайн-тест",
+          "status": "Не начат",
+          "available": false,
+          "relative_link": null
+        },
+        {
+          "title": "Лазерная гравировка",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-11-лазерная-гравировка.html",
+          "source_title": "Лазерная гравировка",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-11-лазерная-гравировка.html",
+          "blocks_count": 36,
+          "navigation_count": 3
+        },
+        {
+          "title": "Сублимационная печать",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-12-сублимационная-печать.html",
+          "source_title": "Сублимационная печать",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-12-сублимационная-печать.html",
+          "blocks_count": 24,
+          "navigation_count": 3
+        },
+        {
+          "title": "Изготовление наклеек",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-13-изготовление-наклеек.html",
+          "source_title": "Изготовление наклеек",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-13-изготовление-наклеек.html",
+          "blocks_count": 19,
+          "navigation_count": 2
+        },
+        {
+          "title": "Вязание с логотипом",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-14-вязание-с-логотипом.html",
+          "source_title": "Вязание с логотипом",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-14-вязание-с-логотипом.html",
+          "blocks_count": 18,
+          "navigation_count": 6
+        },
+        {
+          "title": "3 Тест: Особенности различных методов нанесения изображений",
+          "type": "Онлайн-тест",
+          "status": "Не начат",
+          "available": false,
+          "relative_link": null
+        },
+        {
+          "title": "Прямая печать на ткани",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-16-прямая-печать-на-ткани.html",
+          "source_title": "Прямая печать на ткани",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-16-прямая-печать-на-ткани.html",
+          "blocks_count": 19,
+          "navigation_count": 3
+        },
+        {
+          "title": "Термотрансфер",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-17-термотрансфер.html",
+          "source_title": "Термотрансфер",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-17-термотрансфер.html",
+          "blocks_count": 34,
+          "navigation_count": 3
+        },
+        {
+          "title": "Иммерсионная печать",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-18-иммерсионная-печать.html",
+          "source_title": "Иммерсионная печать",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-18-иммерсионная-печать.html",
+          "blocks_count": 24,
+          "navigation_count": 2
+        },
+        {
+          "title": "Другая кастомизация",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-19-другая-кастомизация.html",
+          "source_title": "Другая кастомизация",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-19-другая-кастомизация.html",
+          "blocks_count": 121,
+          "navigation_count": 12
+        },
+        {
+          "title": "4. Тест: Особенности различных методов нанесения изображений",
+          "type": "Онлайн-тест",
+          "status": "Не начат",
+          "available": false,
+          "relative_link": null
+        },
+        {
+          "title": "Нанесение этикеток In-Mould Labels (IML)",
+          "type": "Лонгрид",
+          "status": "Завершен",
+          "available": true,
+          "relative_link": "lessons/s02-21-нанесение-этикеток-in-mould-labels-iml.html",
+          "source_title": "Нанесение этикеток In-Mould Labels (IML)",
+          "output_file": "C:\\Users\\79017\\OneDrive\\Рабочий стол\\курсор\\курсор 17.02\\курсор\\айспринг\\course_previews\\course_80a15b9e-65f1-11ef-8ee2-823ba3a5138d\\lessons\\s02-21-нанесение-этикеток-in-mould-labels-iml.html",
+          "blocks_count": 49,
+          "navigation_count": 8
         }
       ]
     }
